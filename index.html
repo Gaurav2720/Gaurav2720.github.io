@@ -5,432 +5,317 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO & Social Meta -->
-  <title>Gaurav’s Backend Journey | Da Vinci Codex Portfolio</title>
-  <meta name="description" content="A minimalist Da Vinci inspired engineering portfolio and architectural codex charting Gaurav Bhaskar's Semester 5 Backend Engineering journey in Node.js, Express, Python, and Distributed Systems.">
+  <title>Gaurav’s Backend Journey — Technical Laboratory & Systems Journal</title>
+  <meta name="description" content="A private technical laboratory and engineering journal charting Gaurav Bhaskar's backend experiments, distributed architectures, APIs, and systems.">
   <meta name="author" content="Gaurav Bhaskar">
-  <meta property="og:title" content="Gaurav’s Backend Journey — Da Vinci Codex">
-  <meta property="og:description" content="Minimalist Renaissance engineering codex showcasing backend systems, API endpoints, labs, and GitHub repositories.">
-  
-  <!-- Modern Renaissance Typography (Google Fonts) -->
+  <meta property="og:title" content="Gaurav’s Backend Journey — Engineering Journal">
+  <meta property="og:description" content="Experiments, systems, APIs & everything in between. Minimal, technical red-black engineering portfolio.">
+  <meta property="og:image" content="assets/gaurav-hero.png">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Typography: Inter for clean sans-serif + JetBrains Mono for technical numerals & tags -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 3D Laptop Opening Intro Animation Overlay -->
-  <div id="laptop-intro-overlay" class="laptop-intro-overlay">
-    <div class="intro-controls-bar">
-      <span class="intro-tag">WORKSTATION BOOT SEQUENCE</span>
-      <button id="skip-intro-btn" class="skip-intro-btn">Skip Intro &gt;&gt;</button>
-    </div>
+  <!-- Ambient Red Atmospheric Glows (Extremely subtle, calm cinematic lighting) -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid" aria-hidden="true"></div>
 
-    <div class="laptop-viewport">
-      <div class="laptop-3d-scene">
-        <div id="laptop-device" class="laptop-device">
-          
-          <!-- Laptop Lid / Screen (Rotates on Hinge) -->
-          <div class="laptop-lid" id="laptop-lid">
-            <div class="lid-outer">
-              <!-- Da Vinci Astrolabe Emblem on Laptop Back -->
-              <div class="lid-logo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </div>
-            </div>
-            
-            <div class="lid-inner">
-              <div class="screen-bezel">
-                <div class="camera-lens"></div>
-                <div class="screen-display" id="screen-display">
-                  <div class="terminal-header">
-                    <div class="terminal-dots">
-                      <span></span><span></span><span></span>
-                    </div>
-                    <span class="terminal-title">gaurav@backend-workstation:~</span>
-                  </div>
-                  <div class="terminal-screen-content">
-                    <div class="terminal-ascii-art">
-  ___   _   _   _ ___    ___ __   __
- / __| /_\ | | | | _ \  /   \\ \ / /
-| (_ |/ _ \| |_| |   /  | - | \ V / 
- \___/_/ \_\\___/|_|_\  |_|_|  \_/  
-                    </div>
-                    <p class="term-line"><span class="term-prompt">&gt;</span> Initializing Da Vinci Backend Architecture...</p>
-                    <p class="term-line" id="term-line-2"><span class="term-prompt">&gt;</span> Loading Node.js &amp; Python 3 Runtime...</p>
-                    <p class="term-line" id="term-line-3"><span class="term-prompt">&gt;</span> Authenticating SAP ID: 590012457 [VERIFIED]</p>
-                    <p class="term-line" id="term-line-4"><span class="term-prompt">&gt;</span> Ready. Launching Gaurav’s Backend Journey...</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- Sticky Minimal Navigation -->
+  <header class="nav-wrapper" id="site-header">
+    <nav class="nav-bar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Gaurav's Backend Journey Home">
+        <span class="brand-indicator"></span>
+        <span class="brand-text">GAURAV'S BACKEND JOURNEY</span>
+      </a>
 
-          <!-- Laptop Base / Keyboard Deck -->
-          <div class="laptop-base">
-            <div class="keyboard-deck">
-              <div class="keyboard-grid">
-                <!-- Row of keycaps representation -->
-                <div class="key-row"><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span></div>
-                <div class="key-row"><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span><span class="key"></span></div>
-                <div class="key-row"><span class="key"></span><span class="key"></span><span class="key"></span><span class="key spacebar"></span><span class="key"></span><span class="key"></span><span class="key"></span></div>
-              </div>
-              <div class="trackpad"></div>
-            </div>
-            <!-- Laptop Front Lip / Notch -->
-            <div class="base-notch"></div>
-          </div>
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#experiments" class="nav-link" data-nav="experiments">Experiments</a></li>
+        <li><a href="#experiments" class="nav-link" data-nav="lab" id="nav-lab-link">Lab</a></li>
+        <li><a href="#experiments" class="nav-link" data-nav="theory" id="nav-theory-link">Theory</a></li>
+        <li><a href="#backend-repo" class="nav-link" data-nav="github">GitHub</a></li>
+      </ul>
 
-          <!-- Laptop Cast Shadow -->
-          <div class="laptop-shadow"></div>
-
-        </div>
-      </div>
-
-      <div class="intro-action-hint" id="intro-action-hint">
-        <span class="hint-pulse"></span>
-        <span class="hint-text">Opening  Workstation...</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Abnormal Custom Cursor Elements -->
-  <div id="abnormal-cursor">
-    <div class="cursor-compass">
-      <div class="cursor-ring-outer"></div>
-      <div class="cursor-crosshair-h"></div>
-      <div class="cursor-crosshair-v"></div>
-      <div class="cursor-dot"></div>
-      <div id="cursor-hud" class="cursor-hud">[ X:000 | Y:000 | Φ ]</div>
-    </div>
-  </div>
-
-  <!-- Background Geometry & Ink Particle Trail Canvases -->
-  <canvas id="parchment-canvas"></canvas>
-  <canvas id="cursor-canvas"></canvas>
-  <div class="noise-overlay"></div>
-
-  <!-- Main Site Wrapper -->
-  <div class="site-wrapper">
-
-    <!-- Header Navigation -->
-    <header class="top-bar">
-      <div class="brand-seal">
-        <div class="seal-icon">
-          <!-- Da Vinci Vitruvian / Compass Seal -->
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-          </svg>
-        </div>
-        <div class="seal-text">
-          <span class="seal-title">Codex Gaurav</span>
-          <span class="seal-subtitle">Folio No. 590012457 • Sem 5</span>
-        </div>
-      </div>
-
-      <nav class="nav-controls">
-        <ul class="nav-links">
-          <li><a href="#hero" class="nav-link">Journey</a></li>
-          <li><a href="#index-section" class="nav-link">Course Index</a></li>
-          <li><a href="#repositories" class="nav-link">Repositories</a></li>
-          <li><button id="replay-intro-btn" class="nav-link nav-btn" title="Replay the 3D laptop opening animation">Replay Intro</button></li>
-        </ul>
-
-        <!-- Tactile Mechanical Audio Synthesizer Toggle -->
-        <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle mechanical sound effects">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-          </svg>
-          <span>Audio: On</span>
-        </button>
-      </nav>
-    </header>
-
-    <!-- Hero Codex Section -->
-    <section id="hero" class="hero-codex">
-      <div class="hero-content">
-        <div class="codex-folio-tag">
-          <span class="pulse-point"></span>
-          <span>ANNO DOMINI 2024 • BACKEND ENGINEERING CODEX</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="highlight">Gaurav’s Backend Journey</span>
-        </h1>
-
-        <blockquote class="hero-quote">
-          “Principles for the development of a complete mind: Study the art of science; Study the science of art. Realize that everything connects to everything else.”
-          <cite>— Leonardo da Vinci • Chiaroscuro Systems Architecture</cite>
-        </blockquote>
-
-        <!-- Academic & Technical Credentials (Light card with dark ink labels) -->
-        <div class="hero-author-meta">
-          <div class="meta-item">
-            <span class="meta-label">Architect</span>
-            <span class="meta-value">Gaurav Bhaskar</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Discipline</span>
-            <span class="meta-value">B.Tech CSE Core</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">Academic Batch</span>
-            <span class="meta-value">Batch B3 (Sem 5)</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-label">SAP Identity</span>
-            <span class="meta-value">590012457</span>
-          </div>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#index-section" class="btn-codex btn-primary">
-            <span>Explore Course Index</span>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-          <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer" class="btn-codex btn-secondary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            <span>GitHub Profile</span>
-          </a>
-          <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="btn-codex btn-secondary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-            <span>Backend Repo</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Vitruvian Backend Drawing Board (Dark Chiaroscuro Slate) -->
-      <div class="hero-diagram">
-        <div class="vitruvian-frame">
-          <svg class="vitruvian-svg" viewBox="0 0 300 300">
-            <!-- Concentric Vitruvian Circles -->
-            <circle cx="150" cy="150" r="138" stroke="rgba(212, 175, 55, 0.4)" stroke-width="1" fill="none" class="spin-slow" stroke-dasharray="4 6"></circle>
-            <circle cx="150" cy="150" r="110" stroke="#d4af37" stroke-width="1" fill="none" class="spin-reverse" stroke-dasharray="10 4"></circle>
-            <circle cx="150" cy="150" r="70" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1" fill="none"></circle>
-            <circle cx="150" cy="150" r="30" stroke="#d4af37" stroke-width="1.5" fill="none"></circle>
-
-            <!-- Golden Ratio Rectangles -->
-            <rect x="55" y="55" width="190" height="190" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1" fill="none" transform="rotate(45 150 150)"></rect>
-            <rect x="70" y="70" width="160" height="160" stroke="#d4af37" stroke-width="0.8" fill="none" opacity="0.65"></rect>
-
-            <!-- Drafting Compass Rays -->
-            <line x1="150" y1="12" x2="150" y2="288" stroke="rgba(255, 255, 255, 0.2)" stroke-width="0.75"></line>
-            <line x1="12" y1="150" x2="288" y2="150" stroke="rgba(255, 255, 255, 0.2)" stroke-width="0.75"></line>
-            <line x1="50" y1="50" x2="250" y2="250" stroke="rgba(212, 175, 55, 0.3)" stroke-width="0.75" stroke-dasharray="2 4"></line>
-            <line x1="50" y1="250" x2="250" y2="50" stroke="rgba(212, 175, 55, 0.3)" stroke-width="0.75" stroke-dasharray="2 4"></line>
-
-            <!-- Central Node -->
-            <circle cx="150" cy="150" r="7" fill="#d4af37"></circle>
-            <circle cx="150" cy="150" r="14" stroke="#d4af37" stroke-width="1" fill="none" opacity="0.6"></circle>
-
-            <!-- Satellite Endpoint Nodes (HTTP/REST/TCP) -->
-            <circle cx="150" cy="40" r="4.5" fill="#ffffff"></circle>
-            <circle cx="260" cy="150" r="4.5" fill="#ffffff"></circle>
-            <circle cx="150" cy="260" r="4.5" fill="#ffffff"></circle>
-            <circle cx="40" cy="150" r="4.5" fill="#ffffff"></circle>
-          </svg>
-          <div class="diagram-caption">FIG I. ARCHITECTURAL HARMONY • Φ: 1.618</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats & Metrics Dark Strip (High Contrast Chiaroscuro Band) -->
-    <div class="codex-stats-strip">
-      <div class="stat-box">
-        <span class="stat-num">05</span>
-        <span class="stat-title">Theory Modules</span>
-        <span class="stat-sub">Express, Python, Auth, Postman</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-num">03</span>
-        <span class="stat-title">Lab Experiments</span>
-        <span class="stat-sub">Protocol Analysis, Lab 12A & 12B</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-num">02</span>
-        <span class="stat-title">Core Languages</span>
-        <span class="stat-sub">JavaScript (Node) & Python 3</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-num">100%</span>
-        <span class="stat-title">Open Source</span>
-        <span class="stat-sub">Public Codebases on GitHub</span>
-      </div>
-    </div>
-
-    <!-- Full Fledged Course Index Section -->
-    <section id="index-section" class="course-index-section">
-      <div class="section-header">
-        <span class="section-eyebrow">Compendium & Chronology</span>
-        <h2 class="section-title">The Complete Course Codex</h2>
-        <p class="section-desc">A minimalist, searchable compendium of all lectures, practical laboratory experiments, and server architectures compiled during Semester 5.</p>
-        <div class="renaissance-divider">
-          <span></span>
-          <div class="ornament">❦</div>
-          <span></span>
-        </div>
-      </div>
-
-      <!-- Live Search & Filter Bar -->
-      <div class="index-filter-wrap">
-        <div class="search-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input type="text" id="course-search-input" placeholder="Search by topic, keyword (e.g. Express, Python, Session, Lab)..." autocomplete="off">
-        </div>
-
-        <div class="filter-pills">
-          <button class="filter-pill active" data-filter="all">All Folios (8)</button>
-          <button class="filter-pill" data-filter="theory">Theory Lectures (5)</button>
-          <button class="filter-pill" data-filter="lab">Lab Practicals (2)</button>
-          <button class="filter-pill" data-filter="server">Server Systems (1)</button>
-        </div>
-      </div>
-
-      <!-- Dynamic Course Cards Grid (Populated by script.js) -->
-      <div id="course-cards-container" class="course-grid">
-        <!-- Rendered dynamically -->
-      </div>
-    </section>
-
-    <!-- GitHub Repositories & Curriculum Archive Section -->
-    <section id="repositories" class="repos-section">
-      <div class="section-header">
-        <span class="section-eyebrow">Repositories & Remote Archives</span>
-        <h2 class="section-title">Open Source Manuscripts</h2>
-        <p class="section-desc">Direct gateways to Gaurav's version-controlled repositories and institutional lecture notes.</p>
-        <div class="renaissance-divider">
-          <span></span>
-          <div class="ornament">⚜</div>
-          <span></span>
-        </div>
-      </div>
-
-      <div class="repos-container">
-        <!-- Backend Main Repo -->
-        <div class="repo-card">
-          <div class="repo-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-              <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-              <line x1="6" y1="6" x2="6.01" y2="6"></line>
-              <line x1="6" y1="18" x2="6.01" y2="18"></line>
-            </svg>
-          </div>
-          <h3 class="repo-title">Gaurav2720 / Backend</h3>
-          <div class="repo-meta">Primary Repository • Semester 5</div>
-          <p class="repo-summary">
-            The complete archival repository containing all semester 5 server code, Theory classes (1 to 5), Lab experiments (1 & 12), and active Node.js server configurations.
-          </p>
-          <div class="repo-actions-row">
-            <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="btn-codex btn-primary">
-              <span>Visit Repository</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-            <button class="copy-btn" data-copy="https://github.com/Gaurav2720/Backend.git">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              <span>Copy Git URL</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- GitHub Profile -->
-        <div class="repo-card">
-          <div class="repo-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-            </svg>
-          </div>
-          <h3 class="repo-title">Gaurav Bhaskar (@Gaurav2720)</h3>
-          <div class="repo-meta">GitHub Profile & Organization</div>
-          <p class="repo-summary">
-            Personal developer profile housing project commits, algorithmic challenges, contributions, and engineering repositories across multiple academic semesters.
-          </p>
-          <div class="repo-actions-row">
-            <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer" class="btn-codex btn-secondary">
-              <span>View Profile</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-            <button class="copy-btn" data-copy="https://github.com/Gaurav2720">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              <span>Copy Link</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- UPES SOCS Lecture Portal Link -->
-        <div class="repo-card">
-          <div class="repo-icon-wrap">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-          </div>
-          <h3 class="repo-title">UPES SOCS Backend Lecture Portal</h3>
-          <div class="repo-meta">Official Curriculum Reference</div>
-          <p class="repo-summary">
-            The canonical academic repository and directory listing for the UPES School of Computer Science Backend Development course lectures.
-          </p>
-          <div class="repo-actions-row">
-            <a href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer" class="btn-codex btn-secondary">
-              <span>Access Portal</span>
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-            <button class="copy-btn" data-copy="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-              <span>Copy URL</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="codex-footer">
-      <div class="footer-quote">
-        “Ostinato Rigore — Obstinate Rigour in Systems Engineering.”
-      </div>
-      <div class="footer-subtext">
-        Crafted for Gaurav Bhaskar • SAP ID 590012457 • B.Tech CSE Core (Batch B3) • Hosted on <a href="https://gaurav2720.github.io" target="_blank">GitHub Pages</a>
-      </div>
-    </footer>
-
-  </div>
-
-  <!-- Interactive Codex Modal / Dossier Drawer -->
-  <div id="codex-modal-backdrop" class="codex-modal-backdrop" role="dialog" aria-modal="true">
-    <div class="codex-modal-window">
-      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dossier">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
+      <!-- Mobile Hamburger Toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
       </button>
+    </nav>
+  </header>
 
-      <div class="modal-folio-tag" id="modal-folio">Folio Details</div>
-      <h3 class="modal-title" id="modal-title">Folio Title</h3>
+  <!-- Main Content Flow -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Left: Text Content -->
+        <div class="hero-content">
+          <div class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-label">ENGINEERING JOURNAL · SEMESTER 5</span>
+          </div>
 
-      <div class="modal-body" id="modal-content">
-        <!-- Injected via script.js -->
+          <h1 class="hero-title">Gaurav’s Backend Journey</h1>
+
+          <p class="hero-subtitle">Experiments, systems, APIs &amp; everything in between.</p>
+
+          <div class="hero-credentials">
+            <div class="cred-item">
+              <span class="cred-label">ARCHITECT</span>
+              <span class="cred-val">Gaurav Bhaskar</span>
+            </div>
+            <div class="cred-divider">/</div>
+            <div class="cred-item">
+              <span class="cred-label">SAP ID</span>
+              <span class="cred-val">590012457</span>
+            </div>
+            <div class="cred-divider">/</div>
+            <div class="cred-item">
+              <span class="cred-label">DISCIPLINE</span>
+              <span class="cred-val">B.Tech CSE Core</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#experiments" class="btn btn-primary">
+              <span>View Experiments</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>Backend Repository</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Cinematic Photo Frame with Subtle Red Ambient Treatment -->
+        <div class="hero-visual">
+          <div class="photo-card-wrapper">
+            <div class="photo-glow-backdrop" aria-hidden="true"></div>
+            <div class="photo-frame">
+              <img 
+                src="assets/gaurav-hero.png" 
+                alt="Gaurav Bhaskar - Backend Engineer" 
+                class="hero-portrait portrait-base" 
+                loading="eager"
+                decoding="async"
+              >
+              <img 
+                src="assets/smile.png" 
+                alt="Gaurav Bhaskar - Smiling" 
+                class="hero-portrait portrait-hover" 
+                loading="eager"
+                decoding="async"
+              >
+              <div class="photo-vignette" aria-hidden="true"></div>
+              <div class="photo-tag-overlay">
+                <span class="photo-tag-dot"></span>
+                <span class="photo-tag-text">GB-01 // SYSTEMS LAB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experiment Dashboard Section -->
+    <section id="experiments" class="experiments-section">
+      <div class="section-container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag">INDEX &amp; ARCHIVE</div>
+          <h2 class="section-title">Experiments</h2>
+          <p class="section-desc">A centralized index of practical laboratory implementations, distributed architecture experiments, and systems theory.</p>
+        </div>
+
+        <!-- Minimal Dynamic Statistics Row (Auto-calculated via script.js from data/experiments.js) -->
+        <div class="stats-dashboard" id="stats-dashboard" aria-label="Experiment Metrics">
+          <div class="stat-card">
+            <span class="stat-value" id="stat-total">--</span>
+            <span class="stat-label">Experiments</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-lab">--</span>
+            <span class="stat-label">Lab</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-theory">--</span>
+            <span class="stat-label">Theory</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-projects">--</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+
+        <!-- Filter Controls & Search -->
+        <div class="filter-toolbar">
+          <div class="filter-pills" id="filter-pills" role="tablist" aria-label="Experiment category filter">
+            <button class="filter-pill active" data-category="ALL" role="tab" aria-selected="true">
+              ALL <span class="pill-count" id="pill-count-all">0</span>
+            </button>
+            <button class="filter-pill" data-category="LAB" role="tab" aria-selected="false">
+              LAB <span class="pill-count" id="pill-count-lab">0</span>
+            </button>
+            <button class="filter-pill" data-category="THEORY" role="tab" aria-selected="false">
+              THEORY <span class="pill-count" id="pill-count-theory">0</span>
+            </button>
+            <button class="filter-pill" data-category="PROJECTS" role="tab" aria-selected="false">
+              PROJECTS <span class="pill-count" id="pill-count-projects">0</span>
+            </button>
+          </div>
+
+          <div class="search-wrap">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="experiment-search" 
+              placeholder="Search experiments, tags (e.g., Redis, JWT, Python)..." 
+              aria-label="Search experiments"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <!-- Dynamic Experiment Rows Container (Auto-populated from data/experiments.js) -->
+        <div class="experiments-list" id="experiments-list" role="feed" aria-busy="true">
+          <!-- Injected via script.js -->
+        </div>
+
+        <!-- Zero results state -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <p>No experiments matched your search criteria.</p>
+          <button class="btn btn-secondary btn-sm" id="reset-filter-btn">Clear Filter</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Backend Development / GitHub Section -->
+    <section id="backend-repo" class="repo-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">OPEN SOURCE</div>
+          <h2 class="section-title">Backend Development</h2>
+          <p class="section-desc">A curated collection of my backend experiments, implementations and learning.</p>
+        </div>
+
+        <!-- Repository Highlight Card -->
+        <div class="repo-highlight-card">
+          <div class="repo-top-meta">
+            <div class="repo-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </div>
+            <span class="repo-branch">branch: main</span>
+          </div>
+
+          <h3 class="repo-name">Backend Development Repository</h3>
+          <p class="repo-pitch">
+            The canonical source repository for Semester 5 backend code: Express REST modules, Python runtimes, session security, and distributed cluster benchmarks.
+          </p>
+
+          <!-- Technical Specs Strip -->
+          <div class="repo-tech-strip">
+            <div class="tech-tag">
+              <span class="lang-dot js-dot"></span>
+              <span>JavaScript (Node.js)</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot py-dot"></span>
+              <span>Python 3</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot exp-dot"></span>
+              <span>Express &amp; Middleware</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot dist-dot"></span>
+              <span>Distributed Nodes</span>
+            </div>
+          </div>
+
+          <!-- Quick Actions & Clone Bar -->
+          <div class="repo-actions-bar">
+            <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Explore Repository</span>
+              <span class="arrow-glyph">→</span>
+            </a>
+
+            <div class="clone-box">
+              <span class="clone-cmd">git clone https://github.com/Gaurav2720/Backend.git</span>
+              <button class="clone-copy-btn" id="copy-clone-btn" title="Copy git clone command" aria-label="Copy git clone command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label">Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary reference gateways -->
+          <div class="repo-sub-links">
+            <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer" class="sub-link">
+              <span>@Gaurav2720 Profile</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <span class="sub-dot">·</span>
+            <a href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer" class="sub-link">
+              <span>UPES SOCS Curriculum Lecture Portal</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-title">GAURAV'S BACKEND JOURNEY</span>
+        <span class="footer-tagline">Building. Breaking. Understanding.</span>
       </div>
 
-      <div style="display: flex; justify-content: flex-end; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1.2rem;">
-        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-codex btn-primary">
-          <span>View Source on GitHub</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="#experiments" class="footer-link">Experiments</a>
+        <a href="#hero" class="footer-link">Back to top ↑</a>
+      </nav>
     </div>
-  </div>
+  </footer>
 
-  <script src="script.js"></script>
+  <!-- Toast Notification for Actions (e.g. copied to clipboard) -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- Load Centralized Experiments Data first, followed by Controller Script -->
+  <script src="data/experiments.js?v=2"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
