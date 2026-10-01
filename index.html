@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta -->
+  <title>Gaurav’s Backend Journey — Technical Laboratory & Systems Journal</title>
+  <meta name="description" content="A private technical laboratory and engineering journal charting Gaurav Bhaskar's backend experiments, distributed architectures, APIs, and systems.">
+  <meta name="author" content="Gaurav Bhaskar">
+  <meta property="og:title" content="Gaurav’s Backend Journey — Engineering Journal">
+  <meta property="og:description" content="Experiments, systems, APIs & everything in between. Minimal, technical red-black engineering portfolio.">
+  <meta property="og:image" content="assets/gaurav-hero.png">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Typography: Inter for clean sans-serif + JetBrains Mono for technical numerals & tags -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Red Atmospheric Glows (Extremely subtle, calm cinematic lighting) -->
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid" aria-hidden="true"></div>
+
+  <!-- Sticky Minimal Navigation -->
+  <header class="nav-wrapper" id="site-header">
+    <nav class="nav-bar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand" aria-label="Gaurav's Backend Journey Home">
+        <span class="brand-indicator"></span>
+        <span class="brand-text">GAURAV'S BACKEND JOURNEY</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#experiments" class="nav-link" data-nav="experiments">Experiments</a></li>
+        <li><a href="#experiments" class="nav-link" data-nav="lab" id="nav-lab-link">Lab</a></li>
+        <li><a href="#experiments" class="nav-link" data-nav="theory" id="nav-theory-link">Theory</a></li>
+        <li><a href="#backend-repo" class="nav-link" data-nav="github">GitHub</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content Flow -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Left: Text Content -->
+        <div class="hero-content">
+          <div class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-label">ENGINEERING JOURNAL · SEMESTER 5</span>
+          </div>
+
+          <h1 class="hero-title">Gaurav’s Backend Journey</h1>
+
+          <p class="hero-subtitle">Experiments, systems, APIs &amp; everything in between.</p>
+
+          <div class="hero-credentials">
+            <div class="cred-item">
+              <span class="cred-label">ARCHITECT</span>
+              <span class="cred-val">Gaurav Bhaskar</span>
+            </div>
+            <div class="cred-divider">/</div>
+            <div class="cred-item">
+              <span class="cred-label">SAP ID</span>
+              <span class="cred-val">590012457</span>
+            </div>
+            <div class="cred-divider">/</div>
+            <div class="cred-item">
+              <span class="cred-label">DISCIPLINE</span>
+              <span class="cred-val">B.Tech CSE Core</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#experiments" class="btn btn-primary">
+              <span>View Experiments</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <span>Backend Repository</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Cinematic Photo Frame with Subtle Red Ambient Treatment -->
+        <div class="hero-visual">
+          <div class="photo-card-wrapper">
+            <div class="photo-glow-backdrop" aria-hidden="true"></div>
+            <div class="photo-frame">
+              <img 
+                src="assets/gaurav-hero.png" 
+                alt="Gaurav Bhaskar - Backend Engineer" 
+                class="hero-portrait portrait-base" 
+                loading="eager"
+                decoding="async"
+              >
+              <img 
+                src="assets/smile.png" 
+                alt="Gaurav Bhaskar - Smiling" 
+                class="hero-portrait portrait-hover" 
+                loading="eager"
+                decoding="async"
+              >
+              <div class="photo-vignette" aria-hidden="true"></div>
+              <div class="photo-tag-overlay">
+                <span class="photo-tag-dot"></span>
+                <span class="photo-tag-text">GB-01 // SYSTEMS LAB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Experiment Dashboard Section -->
+    <section id="experiments" class="experiments-section">
+      <div class="section-container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <div class="section-tag">INDEX &amp; ARCHIVE</div>
+          <h2 class="section-title">Experiments</h2>
+          <p class="section-desc">A centralized index of practical laboratory implementations, distributed architecture experiments, and systems theory.</p>
+        </div>
+
+        <!-- Minimal Dynamic Statistics Row (Auto-calculated via script.js from data/experiments.js) -->
+        <div class="stats-dashboard" id="stats-dashboard" aria-label="Experiment Metrics">
+          <div class="stat-card">
+            <span class="stat-value" id="stat-total">--</span>
+            <span class="stat-label">Experiments</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-lab">--</span>
+            <span class="stat-label">Lab</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="stat-theory">--</span>
+            <span class="stat-label">Theory</span>
+          </div>
+        </div>
+
+        <!-- Filter Controls & Search -->
+        <div class="filter-toolbar">
+          <div class="filter-pills" id="filter-pills" role="tablist" aria-label="Experiment category filter">
+            <button class="filter-pill active" data-category="ALL" role="tab" aria-selected="true">
+              ALL <span class="pill-count" id="pill-count-all">0</span>
+            </button>
+            <button class="filter-pill" data-category="LAB" role="tab" aria-selected="false">
+              LAB <span class="pill-count" id="pill-count-lab">0</span>
+            </button>
+            <button class="filter-pill" data-category="THEORY" role="tab" aria-selected="false">
+              THEORY <span class="pill-count" id="pill-count-theory">0</span>
+            </button>
+          </div>
+
+          <div class="search-wrap">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="text" 
+              id="experiment-search" 
+              placeholder="Search experiments, tags (e.g., Redis, JWT, Python)..." 
+              aria-label="Search experiments"
+              autocomplete="off"
+            >
+          </div>
+        </div>
+
+        <!-- Dynamic Experiment Rows Container (Auto-populated from data/experiments.js) -->
+        <div class="experiments-list" id="experiments-list" role="feed" aria-busy="true">
+          <!-- Injected via script.js -->
+        </div>
+
+        <!-- Zero results state -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+          <p>No experiments matched your search criteria.</p>
+          <button class="btn btn-secondary btn-sm" id="reset-filter-btn">Clear Filter</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Backend Development / GitHub Section -->
+    <section id="backend-repo" class="repo-section">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">OPEN SOURCE</div>
+          <h2 class="section-title">Backend Development</h2>
+          <p class="section-desc">A curated collection of my backend experiments, implementations and learning.</p>
+        </div>
+
+        <!-- Repository Highlight Card -->
+        <div class="repo-highlight-card">
+          <div class="repo-top-meta">
+            <div class="repo-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              <span>GitHub</span>
+            </div>
+            <span class="repo-branch">branch: master</span>
+          </div>
+
+          <h3 class="repo-name">Backend Development Repository</h3>
+          <p class="repo-pitch">
+            The canonical source repository for Semester 5 backend code: Express REST modules, Python FastAPI runtimes, MongoDB &amp; Mongoose persistence, session &amp; cookie security, and lab practical reports.
+          </p>
+
+          <!-- Technical Specs Strip -->
+          <div class="repo-tech-strip">
+            <div class="tech-tag">
+              <span class="lang-dot js-dot"></span>
+              <span>JavaScript (Node.js)</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot py-dot"></span>
+              <span>Python (FastAPI)</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot mongo-dot"></span>
+              <span>MongoDB &amp; Mongoose</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot exp-dot"></span>
+              <span>Express &amp; EJS SSR</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot dist-dot"></span>
+              <span>State &amp; Cookies</span>
+            </div>
+          </div>
+
+          <!-- Quick Actions & Clone Bar -->
+          <div class="repo-actions-bar">
+            <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span>Explore Repository</span>
+              <span class="arrow-glyph">→</span>
+            </a>
+
+            <div class="clone-box">
+              <span class="clone-cmd">git clone https://github.com/Gaurav2720/Backend-Main-JS-Python-.git</span>
+              <button class="clone-copy-btn" id="copy-clone-btn" title="Copy git clone command" aria-label="Copy git clone command">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span class="copy-label">Copy</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Secondary reference gateways -->
+          <div class="repo-sub-links">
+            <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer" class="sub-link">
+              <span>@Gaurav2720 Profile</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <span class="sub-dot">·</span>
+            <a href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer" class="sub-link">
+              <span>UPES SOCS Curriculum Lecture Portal</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-title">GAURAV'S BACKEND JOURNEY</span>
+        <span class="footer-tagline">Building. Breaking. Understanding.</span>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="#experiments" class="footer-link">Experiments</a>
+        <a href="#hero" class="footer-link">Back to top ↑</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Actions (e.g. copied to clipboard) -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- Load Centralized Experiments Data first, followed by Controller Script -->
+  <script src="data/experiments.js?v=3"></script>
+  <script src="script.js?v=3"></script>
+</body>
+</html>
