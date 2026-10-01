@@ -92,7 +92,7 @@
                 <polyline points="19 12 12 19 5 12"></polyline>
               </svg>
             </a>
-            <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
               <span>Backend Repository</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -158,10 +158,6 @@
             <span class="stat-value" id="stat-theory">--</span>
             <span class="stat-label">Theory</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-value" id="stat-projects">--</span>
-            <span class="stat-label">Projects</span>
-          </div>
         </div>
 
         <!-- Filter Controls & Search -->
@@ -175,9 +171,6 @@
             </button>
             <button class="filter-pill" data-category="THEORY" role="tab" aria-selected="false">
               THEORY <span class="pill-count" id="pill-count-theory">0</span>
-            </button>
-            <button class="filter-pill" data-category="PROJECTS" role="tab" aria-selected="false">
-              PROJECTS <span class="pill-count" id="pill-count-projects">0</span>
             </button>
           </div>
 
@@ -229,12 +222,12 @@
               </svg>
               <span>GitHub</span>
             </div>
-            <span class="repo-branch">branch: main</span>
+            <span class="repo-branch">branch: master</span>
           </div>
 
           <h3 class="repo-name">Backend Development Repository</h3>
           <p class="repo-pitch">
-            The canonical source repository for Semester 5 backend code: Express REST modules, Python runtimes, session security, and distributed cluster benchmarks.
+            The canonical source repository for Semester 5 backend code: Express REST modules, Python FastAPI runtimes, MongoDB &amp; Mongoose persistence, session &amp; cookie security, and lab practical reports.
           </p>
 
           <!-- Technical Specs Strip -->
@@ -245,27 +238,31 @@
             </div>
             <div class="tech-tag">
               <span class="lang-dot py-dot"></span>
-              <span>Python 3</span>
+              <span>Python (FastAPI)</span>
+            </div>
+            <div class="tech-tag">
+              <span class="lang-dot mongo-dot"></span>
+              <span>MongoDB &amp; Mongoose</span>
             </div>
             <div class="tech-tag">
               <span class="lang-dot exp-dot"></span>
-              <span>Express &amp; Middleware</span>
+              <span>Express &amp; EJS SSR</span>
             </div>
             <div class="tech-tag">
               <span class="lang-dot dist-dot"></span>
-              <span>Distributed Nodes</span>
+              <span>State &amp; Cookies</span>
             </div>
           </div>
 
           <!-- Quick Actions & Clone Bar -->
           <div class="repo-actions-bar">
-            <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
               <span>Explore Repository</span>
               <span class="arrow-glyph">→</span>
             </a>
 
             <div class="clone-box">
-              <span class="clone-cmd">git clone https://github.com/Gaurav2720/Backend.git</span>
+              <span class="clone-cmd">git clone https://github.com/Gaurav2720/Backend-Main-JS-Python-.git</span>
               <button class="clone-copy-btn" id="copy-clone-btn" title="Copy git clone command" aria-label="Copy git clone command">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -304,7 +301,7 @@
       </div>
 
       <nav class="footer-links" aria-label="Footer Navigation">
-        <a href="https://github.com/Gaurav2720/Backend" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
         <a href="#experiments" class="footer-link">Experiments</a>
         <a href="#hero" class="footer-link">Back to top ↑</a>
       </nav>
@@ -315,7 +312,7 @@
   <div class="toast-notice" id="toast-notice" role="status" aria-live="polite"></div>
 
   <!-- Load Centralized Experiments Data first, followed by Controller Script -->
-  <script src="data/experiments.js?v=2"></script>
-  <script src="script.js?v=2"></script>
+  <script src="data/experiments.js?v=3"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
