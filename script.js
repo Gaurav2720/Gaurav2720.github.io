@@ -1,6 +1,6 @@
 /**
  * GAURAV BHASKAR — BACKEND ENGINEERING JOURNAL CONTROLLER
- * Lightweight, fast, vanilla JS renderer and live filter.
+ * Lightweight vanilla JS renderer: filters, live search, and report actions.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,24 +22,35 @@ document.addEventListener("DOMContentLoaded", () => {
   let activeCategory = "ALL";
   let searchQuery = "";
 
+  const pad = (n) => (n < 10 ? `0${n}` : `${n}`);
+
   // Update category counters
   function updateCounters() {
     const total = dataset.length;
-    const labCount = dataset.filter(item => item.category === "LAB").length;
-    const theoryCount = dataset.filter(item => item.category === "THEORY").length;
-    const systemsCount = dataset.filter(item => item.category === "SYSTEMS").length;
+    const labCount = dataset.filter((item) => item.category === "LAB").length;
+    const theoryCount = dataset.filter((item) => item.category === "THEORY").length;
+    const systemsCount = dataset.filter((item) => item.category === "SYSTEMS").length;
 
-    if (countAll) countAll.textContent = total;
-    if (countLab) countLab.textContent = labCount;
-    if (countTheory) countTheory.textContent = theoryCount;
-    if (countSystems) countSystems.textContent = systemsCount;
+    if (countAll) countAll.textContent = pad(total);
+    if (countLab) countLab.textContent = pad(labCount);
+    if (countTheory) countTheory.textContent = pad(theoryCount);
+    if (countSystems) countSystems.textContent = pad(systemsCount);
+  }
+
+  // Escape user-facing strings inserted as HTML
+  function esc(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   // Render cards
   function render() {
     if (!listContainer) return;
 
-    const filtered = dataset.filter(item => {
+    const filtered = dataset.filter((item) => {
       const matchCat = activeCategory === "ALL" || item.category === activeCategory;
       if (!matchCat) return false;
 
@@ -49,58 +60,60 @@ document.addEventListener("DOMContentLoaded", () => {
       const matchDesc = item.description.toLowerCase().includes(q);
       const matchFolder = (item.subCategory || "").toLowerCase().includes(q);
       const matchBadge = (item.categoryLabel || "").toLowerCase().includes(q);
-      const matchTags = (item.tags || []).some(t => t.toLowerCase().includes(q));
+      const matchTags = (item.tags || []).some((t) => t.toLowerCase().includes(q));
 
       return matchTitle || matchDesc || matchFolder || matchBadge || matchTags;
     });
 
     if (filtered.length === 0) {
       listContainer.innerHTML = "";
-      if (emptyState) emptyState.style.display = "flex";
+      if (emptyState) emptyState.hidden = false;
       return;
     }
 
-    if (emptyState) emptyState.style.display = "none";
+    if (emptyState) emptyState.hidden = true;
 
-    listContainer.innerHTML = filtered.map((item, index) => {
-      const numStr = (item.id || (index + 1)) < 10 ? `0${item.id || (index + 1)}` : `${item.id || (index + 1)}`;
-      const tagsHtml = (item.tags || []).map(t => `<span class="tag">${t}</span>`).join("");
-      const folderPath = item.subCategory ? `<span class="card-folder">${item.subCategory}</span>` : "";
+    listContainer.innerHTML = filtered
+      .map((item) => {
+        const numStr = pad(item.id);
+        const tagsHtml = (item.tags || [])
+          .map((t) => `<span class="tag">${esc(t)}</span>`)
+          .join("");
+        const folderPath = item.subCategory
+          ? `<code class="lab-card__path">${esc(item.subCategory)}</code>`
+          : "";
+        const reportHref = item.report || `report.html#lab-${item.id}`;
 
-      return `
-        <article class="experiment-card" data-category="${item.category}">
-          <div class="card-top">
-            <div class="card-meta">
-              <span class="card-number">#${numStr}</span>
-              <span class="card-badge">${item.categoryLabel || item.category}</span>
-              ${folderPath}
-            </div>
+        return `
+        <article class="lab-card" data-category="${esc(item.category)}">
+          <div class="lab-card__head">
+            <span class="lab-card__num">${numStr}</span>
+            <span class="lab-card__badge">${esc(item.categoryLabel || item.category)}</span>
           </div>
 
-          <h2 class="card-title">${item.title}</h2>
-          <p class="card-desc">${item.description}</p>
+          <h3 class="lab-card__title">${esc(item.title)}</h3>
+          <p class="lab-card__desc">${esc(item.description)}</p>
+          ${folderPath}
 
-          <div class="card-bottom">
-            <div class="tag-list">
-              ${tagsHtml}
-            </div>
-            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="card-link">
-              <span>View Folder</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline points="7 7 17 7 17 17"></polyline>
-              </svg>
+          <div class="lab-card__tags">${tagsHtml}</div>
+
+          <div class="lab-card__actions">
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
+              View Folder <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="${reportHref}" class="btn btn--solid">
+              Report <span aria-hidden="true">&#8594;</span>
             </a>
           </div>
-        </article>
-      `;
-    }).join("");
+        </article>`;
+      })
+      .join("");
   }
 
-  // Filter tabs click
-  filterTabs.forEach(tab => {
+  // Filter tabs
+  filterTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      filterTabs.forEach(t => {
+      filterTabs.forEach((t) => {
         t.classList.remove("active");
         t.setAttribute("aria-selected", "false");
       });
@@ -125,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       activeCategory = "ALL";
       searchQuery = "";
       if (searchInput) searchInput.value = "";
-      filterTabs.forEach(t => {
+      filterTabs.forEach((t) => {
         const isAll = t.getAttribute("data-category") === "ALL";
         t.classList.toggle("active", isAll);
         t.setAttribute("aria-selected", isAll ? "true" : "false");
