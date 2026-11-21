@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gaurav Bhaskar — Semester 5 Backend Index</title>
+  <meta name="description" content="An index of Gaurav Bhaskar's Semester 5 backend work — lab experiments, theory exercises and side builds in JavaScript, Python and the web.">
+  <meta name="author" content="Gaurav Bhaskar">
+  <meta name="theme-color" content="#f2eee3">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gaurav Bhaskar — Semester 5 Backend Index">
+  <meta property="og:description" content="Labs, theory exercises and side builds from Semester 5. Filed, tagged and linked to the repo.">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ff4d00'/%3E%3Crect x='2' y='2' width='5' height='5' fill='%23141410'/%3E%3Crect x='9' y='9' width='5' height='5' fill='%23141410'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Header ─────────────────────────────────────────── -->
+  <header class="site-head" id="site-head">
+    <div class="head-inner">
+      <a class="brand" href="#top" aria-label="Gaurav Bhaskar — back to top">
+        <span class="brand-mark" aria-hidden="true">GB</span>
+        <span class="brand-copy">
+          <span class="brand-name">Gaurav Bhaskar</span>
+          <span class="brand-sub">Sem 05 / Backend Index</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="#index">Index</a>
+        <a class="nav-link" href="#toolkit">Toolkit</a>
+        <a class="nav-link" href="#source">Source</a>
+        <a class="nav-link nav-link--repo" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">
+          GitHub <span class="ext" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+      <button class="menu-btn" id="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top" class="anchor-top"></span>
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow" data-reveal>
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Student Work Index / 2026
+        </p>
+
+        <h1 class="hero-title" id="hero-title" data-reveal>
+          Backend,<br>
+          <span class="stroke">bit by bit.</span><span class="caret" aria-hidden="true"></span>
+        </h1>
+
+        <p class="hero-lede" data-reveal>
+          A running index of everything I built for Backend Development in Semester 5 —
+          lab experiments, theory exercises and side experiments across JavaScript,
+          Python and the web.
+        </p>
+
+        <div class="hero-actions" data-reveal>
+          <a class="btn btn--primary" href="#index">
+            Browse the index <span class="btn-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a class="btn" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">
+            Repository <span class="ext" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <p class="hero-meta" data-reveal>
+          <span>19 entries</span>
+          <span class="sep" aria-hidden="true">/</span>
+          <span>1 repo</span>
+          <span class="sep" aria-hidden="true">/</span>
+          <span>Updated <time datetime="2026-11">Nov 2026</time></span>
+        </p>
+      </div>
+
+      <!-- Pixel student ID card -->
+      <aside class="id-card" aria-label="Student details" data-reveal>
+        <div class="id-head">
+          <span>Student.id</span>
+          <span class="id-status">In progress</span>
+        </div>
+
+        <div class="id-photo">
+          <svg class="avatar" viewBox="0 0 16 16" shape-rendering="crispEdges" role="img" aria-label="Pixel-art portrait of Gaurav">
+            <rect width="16" height="16" fill="#ff4d00"/>
+            <rect x="0" y="0" width="2" height="1" fill="#d63f00"/>
+            <rect x="14" y="2" width="2" height="1" fill="#d63f00"/>
+            <rect x="1" y="13" width="1" height="1" fill="#d63f00"/>
+            <rect x="13" y="14" width="2" height="1" fill="#d63f00"/>
+            <rect x="0" y="9" width="1" height="2" fill="#d63f00"/>
+            <rect x="15" y="8" width="1" height="2" fill="#d63f00"/>
+
+            <!-- head -->
+            <rect x="6" y="3" width="4" height="1" fill="#141410"/>
+            <rect x="5" y="4" width="6" height="1" fill="#141410"/>
+            <rect x="5" y="5" width="1" height="2" fill="#141410"/>
+            <rect x="10" y="5" width="1" height="2" fill="#141410"/>
+            <rect x="6" y="5" width="4" height="4" fill="#f7f4ec"/>
+
+            <!-- ears -->
+            <rect x="4" y="6" width="1" height="2" fill="#f7f4ec"/>
+            <rect x="11" y="6" width="1" height="2" fill="#f7f4ec"/>
+
+            <!-- glasses -->
+            <rect x="5" y="6" width="1" height="1" fill="#141410"/>
+            <rect x="6" y="6" width="1" height="1" fill="#f7f4ec"/>
+            <rect x="7" y="6" width="2" height="1" fill="#141410"/>
+            <rect x="9" y="6" width="1" height="1" fill="#f7f4ec"/>
+            <rect x="10" y="6" width="1" height="1" fill="#141410"/>
+
+            <!-- eyes + mouth -->
+            <rect x="6" y="7" width="1" height="1" fill="#141410"/>
+            <rect x="9" y="7" width="1" height="1" fill="#141410"/>
+            <rect x="7" y="8" width="2" height="1" fill="#141410"/>
+
+            <!-- jaw + neck -->
+            <rect x="6" y="9" width="4" height="1" fill="#f7f4ec"/>
+            <rect x="7" y="10" width="2" height="1" fill="#f7f4ec"/>
+
+            <!-- shirt -->
+            <rect x="3" y="11" width="10" height="1" fill="#141410"/>
+            <rect x="2" y="12" width="12" height="1" fill="#141410"/>
+            <rect x="2" y="13" width="12" height="1" fill="#141410"/>
+            <rect x="1" y="14" width="14" height="1" fill="#141410"/>
+            <rect x="1" y="15" width="14" height="1" fill="#141410"/>
+            <rect x="7" y="11" width="2" height="2" fill="#f7f4ec"/>
+          </svg>
+          <span class="id-photo-tag">ID / 590012457</span>
+        </div>
+
+        <dl class="id-rows">
+          <div class="id-row"><dt>Name</dt><dd>Gaurav Bhaskar</dd></div>
+          <div class="id-row"><dt>SAP ID</dt><dd>590012457</dd></div>
+          <div class="id-row"><dt>Program</dt><dd>B.Tech CSE — Core</dd></div>
+          <div class="id-row"><dt>Batch</dt><dd>03</dd></div>
+          <div class="id-row"><dt>Semester</dt><dd>05</dd></div>
+        </dl>
+
+        <div class="barcode" aria-hidden="true"></div>
+      </aside>
+    </section>
+
+    <!-- ── Ticker ───────────────────────────────────────── -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <div class="ticker-group">
+          <span>Lab 01 — HTML5</span><span class="tick-dot">◆</span>
+          <span>Lab 05 — JavaScript</span><span class="tick-dot">◆</span>
+          <span>Lab 07–09 — ES6 + DOM</span><span class="tick-dot">◆</span>
+          <span>Lab 12 — Express + EJS</span><span class="tick-dot">◆</span>
+          <span>Lab 12B — Cookies + Sessions</span><span class="tick-dot">◆</span>
+          <span>Lab 13 — Mongoose</span><span class="tick-dot">◆</span>
+          <span>Lab 15 — Django</span><span class="tick-dot">◆</span>
+          <span>Theory — REST + CRUD</span><span class="tick-dot">◆</span>
+          <span>Tools — Docker + Postman</span><span class="tick-dot">◆</span>
+        </div>
+        <div class="ticker-group">
+          <span>Lab 01 — HTML5</span><span class="tick-dot">◆</span>
+          <span>Lab 05 — JavaScript</span><span class="tick-dot">◆</span>
+          <span>Lab 07–09 — ES6 + DOM</span><span class="tick-dot">◆</span>
+          <span>Lab 12 — Express + EJS</span><span class="tick-dot">◆</span>
+          <span>Lab 12B — Cookies + Sessions</span><span class="tick-dot">◆</span>
+          <span>Lab 13 — Mongoose</span><span class="tick-dot">◆</span>
+          <span>Lab 15 — Django</span><span class="tick-dot">◆</span>
+          <span>Theory — REST + CRUD</span><span class="tick-dot">◆</span>
+          <span>Tools — Docker + Postman</span><span class="tick-dot">◆</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Stats ────────────────────────────────────────── -->
+    <section class="stats" aria-label="Index at a glance">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-num">07</div>
+          <div class="stat-label">Lab reports</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">08</div>
+          <div class="stat-label">Theory files</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">04</div>
+          <div class="stat-label">Side quests</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">19</div>
+          <div class="stat-label">Total entries</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 01 / Index ───────────────────────────────────── -->
+    <section class="section" id="index" aria-labelledby="index-title">
+      <div class="section-head" data-reveal>
+        <div class="section-title-wrap">
+          <span class="section-no" aria-hidden="true">01</span>
+          <h2 class="section-title" id="index-title">The Index</h2>
+        </div>
+        <p class="section-desc">
+          Nineteen files, one semester. Filter by track or search the drawer —
+          every entry opens the matching folder in the repository.
+        </p>
+      </div>
+
+      <div class="index-controls" data-reveal>
+        <div class="filters" role="group" aria-label="Filter entries by track">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">
+            All <span class="count">19</span>
+          </button>
+          <button class="filter" type="button" data-filter="lab" aria-pressed="false">
+            Labs <span class="count">07</span>
+          </button>
+          <button class="filter" type="button" data-filter="theory" aria-pressed="false">
+            Theory <span class="count">08</span>
+          </button>
+          <button class="filter" type="button" data-filter="extra" aria-pressed="false">
+            Extras <span class="count">04</span>
+          </button>
+        </div>
+
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 16 16" aria-hidden="true">
+            <circle cx="6.5" cy="6.5" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M9.8 9.8 14 14" stroke="currentColor" stroke-width="1.6"/>
+          </svg>
+          <label class="visually-hidden" for="file-search">Search entries</label>
+          <input class="search-input" id="file-search" type="search" placeholder="Search files…  /" autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+
+      <div class="list-head" aria-hidden="true">
+        <span>No.</span>
+        <span>File / Description</span>
+        <span>Track</span>
+      </div>
+
+      <div class="file-list" id="file-list" data-reveal>
+        <!-- Labs -->
+        <div class="file-row" data-category="lab" data-search="lab 01 html5 semantic document forms audio video meter progress">
+          <span class="file-id">01</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 01 / HTML5</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/lAB1" target="_blank" rel="noopener noreferrer">Semantic Document</a>
+            <span class="file-desc">A structured page built with semantic tags, modern form controls, audio/video embeds and meter + progress elements.</span>
+            <span class="file-tags"><span>HTML5</span><span>Semantics</span><span>Forms</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/lAB1/Report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 01 report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <div class="file-row" data-category="lab" data-search="lab 05 javascript core arrays objects functions library management pbl">
+          <span class="file-id">02</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 05 / JavaScript</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab5/Lab_05_JS_Concepts" target="_blank" rel="noopener noreferrer">JavaScript Core</a>
+            <span class="file-desc">Arrays, objects and functions, plus a library-management PBL utility built on top of them.</span>
+            <span class="file-tags"><span>JavaScript</span><span>Objects</span><span>PBL</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab5/Lab_05_JS_Concepts/Report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 05 report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <div class="file-row" data-category="lab" data-search="lab 07 08 09 es6 dom events event handling todo app">
+          <span class="file-id">03</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 07–09 / ES6</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab7,8,9" target="_blank" rel="noopener noreferrer">ES6, DOM &amp; Events</a>
+            <span class="file-desc">Modern ES6 syntax, live DOM manipulation and event delegation, wrapped into a state-driven to-do app.</span>
+            <span class="file-tags"><span>ES6</span><span>DOM</span><span>Events</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab7,8,9/Report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 07–09 report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <div class="file-row" data-category="lab" data-search="lab 12a express ejs routing params query json calculator register result">
+          <span class="file-id">04</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 12A / Express</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab12/Lab12A" target="_blank" rel="noopener noreferrer">Express &amp; EJS</a>
+            <span class="file-desc">Routing, route and query params, JSON responses, a calculator endpoint and server-rendered register/result views.</span>
+            <span class="file-tags"><span>Node.js</span><span>Express</span><span>EJS</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab12/Lab12A/report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 12A report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <div class="file-row" data-category="lab" data-search="lab 12b cookies sessions state management cookie parser express session">
+          <span class="file-id">05</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 12B / State</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab12/LAB12b" target="_blank" rel="noopener noreferrer">Cookies &amp; Sessions</a>
+            <span class="file-desc">Client cookies and server sessions — maxAge, cookie parsing, a visit counter and a clean session destroy.</span>
+            <span class="file-tags"><span>Express</span><span>Cookies</span><span>Sessions</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab12/LAB12b/report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 12B report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <div class="file-row" data-category="lab" data-search="lab 13 mongodb mongoose crud schema validation signup login users atlas">
+          <span class="file-id">06</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 13 / MongoDB</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab13" target="_blank" rel="noopener noreferrer">MongoDB &amp; Mongoose</a>
+            <span class="file-desc">A validated Mongoose schema and a full user flow: signup, login, duplicate-key handling and a users list.</span>
+            <span class="file-tags"><span>MongoDB</span><span>Mongoose</span><span>CRUD</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab13/report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 13 report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <div class="file-row" data-category="lab" data-search="lab 15 django todo mvt orm templates views middleware crud">
+          <span class="file-id">07</span>
+          <span class="file-main">
+            <span class="file-kicker">Lab 15 / Django</span>
+            <a class="file-title file-open" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/LAB15" target="_blank" rel="noopener noreferrer">Django Todo</a>
+            <span class="file-desc">A complete Django MVT app with models, views, custom middleware, templates, static files and CRUD.</span>
+            <span class="file-tags"><span>Python</span><span>Django</span><span>ORM</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Lab</span>
+            <a class="file-report" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/LAB15/report.md" target="_blank" rel="noopener noreferrer" aria-label="Lab 15 report — opens in a new tab">Report <span aria-hidden="true">↗</span></a>
+          </span>
+        </div>
+
+        <!-- Theory -->
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Class1" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="class 01 express ejs student list views">
+          <span class="file-id">08</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory 01 / Express</span>
+            <span class="file-title">Express + EJS</span>
+            <span class="file-desc">A first Express app with two EJS views, rendering a student list from an in-memory array.</span>
+            <span class="file-tags"><span>Express</span><span>EJS</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Class2" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="class 02 devtools postman api testing web tools">
+          <span class="file-id">09</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory 02 / Tooling</span>
+            <span class="file-title">DevTools &amp; Postman</span>
+            <span class="file-desc">Exploring browser developer tools and using Postman to inspect requests and test API endpoints.</span>
+            <span class="file-tags"><span>DevTools</span><span>Postman</span><span>APIs</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/class3" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="class 03 fastapi python rest uvicorn first route">
+          <span class="file-id">10</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory 03 / Python</span>
+            <span class="file-title">FastAPI First Route</span>
+            <span class="file-desc">A minimal Python REST service on FastAPI, served locally with Uvicorn and reload enabled.</span>
+            <span class="file-tags"><span>Python</span><span>FastAPI</span><span>REST</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/class4" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="class 04 rest crud get post put delete api server">
+          <span class="file-id">11</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory 04 / REST</span>
+            <span class="file-title">REST &amp; CRUD</span>
+            <span class="file-desc">Creating APIs and exercising GET, POST, PUT and DELETE against a live local server.</span>
+            <span class="file-tags"><span>REST</span><span>CRUD</span><span>APIs</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/class5" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="class 05 express sessions middleware state http">
+          <span class="file-id">12</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory 05 / Sessions</span>
+            <span class="file-title">Express Sessions</span>
+            <span class="file-desc">Session middleware fundamentals — keeping user state alive across stateless HTTP requests.</span>
+            <span class="file-tags"><span>Express</span><span>Sessions</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Class15" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="class 15 data modeling sqlalchemy mongoose blog schema ecommerce entities">
+          <span class="file-id">13</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory 15 / Modeling</span>
+            <span class="file-title">Data Modeling</span>
+            <span class="file-desc">An e-commerce entity model, SQLAlchemy relationships and a Mongoose blog schema with validation.</span>
+            <span class="file-tags"><span>SQLAlchemy</span><span>Mongoose</span><span>Schema</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Unit2/ORM" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="unit 2 orm sqlalchemy back_populates cascade crud sqlite relationships">
+          <span class="file-id">14</span>
+          <span class="file-main">
+            <span class="file-kicker">Unit 02 / ORM</span>
+            <span class="file-title">ORM Deep Dive</span>
+            <span class="file-desc">SQLAlchemy models joined with back_populates, cascade deletes and a four-operation CRUD walkthrough.</span>
+            <span class="file-tags"><span>SQLAlchemy</span><span>ORM</span><span>SQLite</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/class_docker" target="_blank" rel="noopener noreferrer"
+           data-category="theory" data-search="docker express container node api students containerization">
+          <span class="file-id">15</span>
+          <span class="file-main">
+            <span class="file-kicker">Theory / Docker</span>
+            <span class="file-title">Express in a Container</span>
+            <span class="file-desc">The same Express app shipped inside Docker, with a JSON students endpoint and container networking.</span>
+            <span class="file-tags"><span>Docker</span><span>Express</span><span>Node.js</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Theory</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <!-- Extras -->
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/Note-taking-Test-viva" target="_blank" rel="noopener noreferrer"
+           data-category="extra" data-search="my notes lab exam viva express ejs mongodb atlas driver">
+          <span class="file-id">16</span>
+          <span class="file-main">
+            <span class="file-kicker">Extra / Lab exam</span>
+            <span class="file-title">My Notes</span>
+            <span class="file-desc">A lab-exam notes app on Express, EJS and the MongoDB driver: list, create and manage notes.</span>
+            <span class="file-tags"><span>Express</span><span>MongoDB</span><span>EJS</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Extra</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Assignment/loginpage" target="_blank" rel="noopener noreferrer"
+           data-category="extra" data-search="login system assignment auth bcrypt sessions dashboard register express">
+          <span class="file-id">17</span>
+          <span class="file-main">
+            <span class="file-kicker">Extra / Assignment</span>
+            <span class="file-title">Login System</span>
+            <span class="file-desc">Session-based auth with bcrypt hashing, register/login flows and a protected dashboard.</span>
+            <span class="file-tags"><span>Express</span><span>bcrypt</span><span>Sessions</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Extra</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/Server" target="_blank" rel="noopener noreferrer"
+           data-category="extra" data-search="server sandbox express json routes post routing middleware">
+          <span class="file-id">18</span>
+          <span class="file-main">
+            <span class="file-kicker">Extra / Sandbox</span>
+            <span class="file-title">Server Sandbox</span>
+            <span class="file-desc">A sandbox Express server with JSON routes, body parsing and a validated POST endpoint.</span>
+            <span class="file-tags"><span>Express</span><span>JSON</span><span>Routing</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Extra</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <a class="file-row" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/dJango/firstproj" target="_blank" rel="noopener noreferrer"
+           data-category="extra" data-search="django scaffold first project settings urls wsgi asgi python">
+          <span class="file-id">19</span>
+          <span class="file-main">
+            <span class="file-kicker">Extra / Django</span>
+            <span class="file-title">Django Scaffold</span>
+            <span class="file-desc">The first Django project: app registry, settings, URL config and WSGI/ASGI entry points.</span>
+            <span class="file-tags"><span>Python</span><span>Django</span></span>
+          </span>
+          <span class="file-side">
+            <span class="file-type">Extra</span>
+            <span class="file-arrow" aria-hidden="true">↗</span>
+          </span>
+        </a>
+
+        <div class="empty" id="empty-state" hidden>
+          <span class="empty-pixel" aria-hidden="true"></span>
+          <p id="empty-text">No files match that filter.</p>
+          <button class="empty-reset" type="button" id="empty-reset">Reset the drawer</button>
+        </div>
+      </div>
+
+      <div class="index-foot" data-reveal>
+        <p id="result-count" aria-live="polite">Showing 19 of 19 entries</p>
+        <p class="index-hint">Tip: press <kbd>/</kbd> to search</p>
+      </div>
+    </section>
+
+    <!-- ── 02 / Toolkit ─────────────────────────────────── -->
+    <section class="section" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="section-head" data-reveal>
+        <div class="section-title-wrap">
+          <span class="section-no" aria-hidden="true">02</span>
+          <h2 class="section-title" id="toolkit-title">The Toolkit</h2>
+        </div>
+        <p class="section-desc">
+          The languages, frameworks and tools that show up across the index.
+          Used, broken, and fixed at least once.
+        </p>
+      </div>
+
+      <div class="stack-layout">
+        <aside class="stack-note" data-reveal>
+          <p class="stack-note-label">Stack note</p>
+          <p class="stack-note-copy">
+            I started the semester writing HTML by hand and finished it wiring
+            Django models to templates, testing JSON in Postman and shipping an
+            Express app inside Docker. The through-line is the request–response
+            cycle — everything else is learning where the data lives.
+          </p>
+          <pre class="stack-code" aria-label="Terminal output"><span class="code-muted">// sem-05 / stack</span>
+<span class="code-accent">const</span> stack = {
+  runtime: <span class="code-string">"node"</span>,
+  data: <span class="code-string">"mongo + sql"</span>,
+  ship: <span class="code-string">"docker"</span>
+};</pre>
+        </aside>
+
+        <div class="tools-grid">
+          <article class="tool-card" data-reveal>
+            <h3>Languages</h3>
+            <div class="chips">
+              <span class="chip">JavaScript</span>
+              <span class="chip">Python</span>
+              <span class="chip">SQL</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+            </div>
+          </article>
+
+          <article class="tool-card" data-reveal>
+            <h3>Runtime + Frameworks</h3>
+            <div class="chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
+              <span class="chip">Django</span>
+              <span class="chip">FastAPI</span>
+              <span class="chip">Uvicorn</span>
+            </div>
+          </article>
+
+          <article class="tool-card" data-reveal>
+            <h3>Data + ORM</h3>
+            <div class="chips">
+              <span class="chip">MongoDB</span>
+              <span class="chip">Mongoose</span>
+              <span class="chip">SQLite</span>
+              <span class="chip">SQLAlchemy</span>
+              <span class="chip">Atlas</span>
+            </div>
+          </article>
+
+          <article class="tool-card" data-reveal>
+            <h3>Templates + Tooling</h3>
+            <div class="chips">
+              <span class="chip">EJS</span>
+              <span class="chip">Django Templates</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Postman</span>
+              <span class="chip">Git</span>
+              <span class="chip">npm</span>
+              <span class="chip">uv</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 03 / Source ──────────────────────────────────── -->
+    <section class="section" id="source" aria-labelledby="source-title">
+      <div class="section-head" data-reveal>
+        <div class="section-title-wrap">
+          <span class="section-no" aria-hidden="true">03</span>
+          <h2 class="section-title" id="source-title">The Source</h2>
+        </div>
+        <p class="section-desc">
+          One public repo holds all of it — code, reports, and the occasional
+          late-night experiment.
+        </p>
+      </div>
+
+      <div class="source-layout">
+        <div class="source-copy" data-reveal>
+          <p>
+            Everything in this index lives in a single GitHub repository. Each
+            folder contains the working code and, where relevant, a written
+            report covering the aim, procedure, output and takeaways.
+          </p>
+          <p>
+            It is not a polished product. It is a record of learning the backend
+            properly — one route, one schema, one container at a time.
+          </p>
+
+          <div class="source-facts">
+            <div class="source-fact">
+              <span class="fact-label">Repo</span>
+              <span class="fact-value">Backend-Main-JS-Python-</span>
+            </div>
+            <div class="source-fact">
+              <span class="fact-label">Program</span>
+              <span class="fact-value">B.Tech CSE — Core</span>
+            </div>
+            <div class="source-fact">
+              <span class="fact-label">Batch</span>
+              <span class="fact-value">03</span>
+            </div>
+            <div class="source-fact">
+              <span class="fact-label">Semester</span>
+              <span class="fact-value">05</span>
+            </div>
+          </div>
+
+          <div class="source-links">
+            <a class="btn btn--primary" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">
+              Open repository <span class="ext" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn" href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer">
+              Course material <span class="ext" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="terminal" data-reveal>
+          <div class="terminal-bar">
+            <span class="dot dot--accent"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="terminal-name">backend@sem5 — zsh</span>
+          </div>
+          <div class="terminal-body">
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">git clone github.com/Gaurav2720/Backend-Main-JS-Python-</span></p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cd BACKEND</span></p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">npm install</span></p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">node Server/server.js</span></p>
+            <p class="t-line t-out"><span class="t-muted">→</span><span>server alive at http://localhost:3000</span></p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="t-cmd">cd lab/LAB15 &amp;&amp; python manage.py runserver</span></p>
+            <p class="t-line t-out"><span class="t-muted">→</span><span>Django ready at http://127.0.0.1:8000</span></p>
+            <p class="t-line"><span class="t-prompt">$</span><span class="caret-block" aria-hidden="true"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-eyebrow">Semester 05 / Backend Development</p>
+          <h2 class="footer-name">Gaurav<br><span class="accent">Bhaskar</span><span class="footer-dot" aria-hidden="true">.</span></h2>
+        </div>
+
+        <div class="footer-side">
+          <dl class="footer-meta">
+            <div><dt>Student</dt><dd>Gaurav Bhaskar</dd></div>
+            <div><dt>SAP ID</dt><dd>590012457</dd></div>
+            <div><dt>Program</dt><dd>B.Tech CSE — Core</dd></div>
+            <div><dt>Batch</dt><dd>03</dd></div>
+            <div><dt>Semester</dt><dd>05</dd></div>
+          </dl>
+
+          <div class="footer-links">
+            <a class="footer-link" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a class="footer-link" href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer">
+              Course <span aria-hidden="true">↗</span>
+            </a>
+            <button class="footer-link" type="button" id="to-top-btn">Back to top <span aria-hidden="true">↑</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Gaurav Bhaskar</p>
+        <p>Sem 05 — Backend Development</p>
+        <p>Built by hand. No templates.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
