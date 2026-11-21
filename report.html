@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lab Reports — Gaurav Bhaskar</title>
+  <meta name="description" content="Consolidated Semester 5 backend engineering lab reports — aim, approach, stack and source write-up for all 18 experiments by Gaurav Bhaskar.">
+  <meta name="author" content="Gaurav Bhaskar">
+  <meta name="theme-color" content="#0b0b0c">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lab Reports — Gaurav Bhaskar">
+  <meta property="og:description" content="Every backend experiment, documented: HTML5, JavaScript, Express, MongoDB, Django, FastAPI, Kafka and Docker.">
+  <meta property="og:image" content="gaurav-hero.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=7">
+</head>
+<body id="top" class="report-page">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Gaurav Bhaskar — home">
+      <span class="brand__mark">GB</span>
+      <span class="brand__text">
+        Gaurav Bhaskar
+        <small>Backend Engineering</small>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#about">About</a>
+      <a href="index.html#labs">Labs</a>
+      <a href="index.html#process">Process</a>
+      <a href="report.html" aria-current="page">Reports</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+
+    <a class="header-cta" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">
+      GitHub <span aria-hidden="true">&#8599;</span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="report-hero">
+      <div class="report-hero__inner">
+        <p class="eyebrow">
+          <span class="pulse" aria-hidden="true"></span>
+          Semester 5 · Report Index · 18 entries
+        </p>
+
+        <h1>Lab<br>Reports<span class="accent">.</span></h1>
+
+        <p>
+          One page for the whole paper trail. Every experiment below lists its aim,
+          what was actually built, the folder that holds the code, and a link to the
+          original <code>report.md</code> in the backend repository.
+        </p>
+
+        <div class="report-hero__actions">
+          <a class="btn btn--solid btn--lg" href="index.html#labs">Back to the labs <span aria-hidden="true">&#8592;</span></a>
+          <a class="btn btn--ghost btn--lg" href="report.md" target="_blank" rel="noopener noreferrer">
+            Open report.md <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REPORT BODY ===================== -->
+    <div class="report-main">
+
+      <!-- Table of contents -->
+      <nav class="report-toc" aria-label="Report contents">
+        <h2>Jump to an entry</h2>
+        <div class="report-toc__grid">
+          <a href="#lab-1"><span>01</span> HTML5 Structure</a>
+          <a href="#lab-2"><span>02</span> JavaScript Core</a>
+          <a href="#lab-3"><span>03</span> DOM &amp; Events</a>
+          <a href="#lab-4"><span>04</span> Express &amp; EJS</a>
+          <a href="#lab-5"><span>05</span> Cookies &amp; Sessions</a>
+          <a href="#lab-6"><span>06</span> MongoDB &amp; Mongoose</a>
+          <a href="#lab-7"><span>07</span> Django Todo</a>
+          <a href="#lab-8"><span>08</span> Auth &amp; Todo</a>
+          <a href="#lab-9"><span>09</span> Express Views</a>
+          <a href="#lab-10"><span>10</span> HTTP &amp; Postman</a>
+          <a href="#lab-11"><span>11</span> FastAPI Setup</a>
+          <a href="#lab-12"><span>12</span> FastAPI CRUD</a>
+          <a href="#lab-13"><span>13</span> Cookie Security</a>
+          <a href="#lab-14"><span>14</span> ORM Concepts</a>
+          <a href="#lab-15"><span>15</span> SQLite &amp; Modeling</a>
+          <a href="#lab-16"><span>16</span> Docker</a>
+          <a href="#lab-17"><span>17</span> Kafka</a>
+          <a href="#lab-18"><span>18</span> Notes &amp; Viva</a>
+        </div>
+      </nav>
+
+      <!-- ============ 01 ============ -->
+      <article class="report-entry" id="lab-1">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">01</span>
+          <span class="report-entry__badge">Lab 1</span>
+          <code class="report-entry__folder">BACKEND/lab/lAB1</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>HTML5 Semantic Structure &amp; Form Controls</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To create a simple web page using HTML5 semantic elements along with basic form, media and multimedia features.
+          </div>
+          <p>
+            The page is structured with <code>header</code>, <code>nav</code>, <code>main</code>,
+            <code>section</code>, <code>article</code>, <code>aside</code> and <code>footer</code>.
+            Form work covers input types and validation attributes, plus <code>progress</code>
+            and <code>meter</code> elements; multimedia work embeds audio and video with controls.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">HTML5</span><span class="tag">Forms</span>
+            <span class="tag">Multimedia</span><span class="tag">Semantic Web</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/lAB1" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/lAB1/Report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 02 ============ -->
+      <article class="report-entry" id="lab-2">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">02</span>
+          <span class="report-entry__badge">Lab 5</span>
+          <code class="report-entry__folder">BACKEND/lab/Lab5/Lab_05_JS_Concepts</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Core JavaScript Engine &amp; Async Foundations</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To demonstrate JavaScript arrays, objects and functions, and to understand scoping, closures, prototypes and the event loop.
+          </div>
+          <p>
+            Practised array initialisation and manipulation, object property access, and
+            function declaration versus expression patterns. Asynchronous behaviour was
+            traced through callbacks, Promises and <code>async/await</code>, with closures
+            and prototype inheritance used to explain lexical scope and shared behaviour.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">JavaScript</span><span class="tag">Arrays</span>
+            <span class="tag">Objects</span><span class="tag">Functions</span>
+            <span class="tag">Async/Await</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab5/Lab_05_JS_Concepts" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab5/Lab_05_JS_Concepts/Report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 03 ============ -->
+      <article class="report-entry" id="lab-3">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">03</span>
+          <span class="report-entry__badge">Lab 7, 8, 9</span>
+          <code class="report-entry__folder">BACKEND/lab/Lab7,8,9</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>DOM Manipulation, Events &amp; Interactive Todo Application</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To understand and apply ES6 features, DOM manipulation and event handling in order to build interactive web pages.
+          </div>
+          <p>
+            Applied <code>let</code>/<code>const</code>, arrow functions, template literals,
+            destructuring, spread/rest, classes and promises. Then walked the DOM tree,
+            created and removed nodes, and handled bubbling and event delegation before
+            assembling an interactive Todo application with live state updates.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">ES6</span><span class="tag">DOM</span>
+            <span class="tag">Events</span><span class="tag">Todo App</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab7,8,9" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab7,8,9/Report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 04 ============ -->
+      <article class="report-entry" id="lab-4">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">04</span>
+          <span class="report-entry__badge">Lab 12A</span>
+          <code class="report-entry__folder">BACKEND/lab/Lab12/Lab12A/nodejs-express-lab</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Express Server Routing &amp; EJS Server-Side Rendering</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To build and configure a backend web server with Node.js and Express.js, demonstrating the request–response cycle, routing, route and query parameters, body parsing and EJS server-side templating.
+          </div>
+          <p>
+            Configured Express with <code>express.json()</code> and
+            <code>express.urlencoded()</code>, implemented GET and POST routes, dynamic
+            parameters (<code>/user/:id</code>, <code>/product/:category/:id</code>) and
+            query handling (<code>/search</code>, <code>/calculate</code>). Responses
+            ranged from plain text to JSON and rendered EJS views, with deliberate use of
+            HTTP status codes.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Node.js</span><span class="tag">Express.js</span>
+            <span class="tag">EJS</span><span class="tag">Routing</span>
+            <span class="tag">SSR</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab12/Lab12A/nodejs-express-lab" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab12/Lab12A/report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 05 ============ -->
+      <article class="report-entry" id="lab-5">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">05</span>
+          <span class="report-entry__badge">Lab 12B</span>
+          <code class="report-entry__folder">BACKEND/lab/Lab12/LAB12b</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>State Management with Cookies &amp; Express Sessions</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To implement state management in Express.js using client-side cookies via <code>cookie-parser</code> and server-side sessions via <code>express-session</code>.
+          </div>
+          <p>
+            Created, read and destroyed cookies with <code>maxAge</code>,
+            <code>httpOnly</code> and <code>secure</code> flags; inspected incoming
+            <code>req.cookies</code>; established signed server-side sessions; and tore
+            state down with <code>res.clearCookie()</code> and session destruction.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Cookies</span><span class="tag">Sessions</span>
+            <span class="tag">State</span><span class="tag">Security</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab12/LAB12b" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab12/LAB12b/report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 06 ============ -->
+      <article class="report-entry" id="lab-6">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">06</span>
+          <span class="report-entry__badge">Lab 13</span>
+          <code class="report-entry__folder">BACKEND/lab/Lab13/mongoose-demo</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>MongoDB Persistence &amp; Mongoose ODM CRUD Operations</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To design and implement MongoDB persistence in a Node.js/Express application using the Mongoose ODM, covering schema definitions, field validation, unique indexing, asynchronous CRUD and error handling.
+          </div>
+          <p>
+            Defined a strict user schema, enforced required and unique validation, connected
+            the app to MongoDB, and implemented create, read, update and delete flows with
+            <code>async/await</code> and structured error handling around duplicate keys and
+            failed validation.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">MongoDB</span><span class="tag">Mongoose</span>
+            <span class="tag">CRUD</span><span class="tag">NoSQL</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab13/mongoose-demo" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Lab13/report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 07 ============ -->
+      <article class="report-entry" id="lab-7">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">07</span>
+          <span class="report-entry__badge">Lab 15</span>
+          <code class="report-entry__folder">BACKEND/lab/LAB15</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Full-Stack Django Todo Application &amp; SQLite Integration</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To build a full-stack Todo application with the Python Django framework, following the Model-View-Template architecture with SQLite persistence and ORM queries.
+          </div>
+          <p>
+            Scaffolded <code>todo_project</code> with a dedicated <code>todo</code>
+            application, modelled tasks in SQLite through Django's ORM, wired URL routing
+            and views, rendered templates, and handled CSRF-protected form submissions in a
+            responsive interface.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Django</span><span class="tag">Python</span>
+            <span class="tag">SQLite</span><span class="tag">MVT</span>
+            <span class="tag">ORM</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/LAB15" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/LAB15/report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 08 ============ -->
+      <article class="report-entry" id="lab-8">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">08</span>
+          <span class="report-entry__badge">Lab Assignment</span>
+          <code class="report-entry__folder">BACKEND/lab/Assignment/loginpage</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Authentication Flow &amp; Interactive Todo Service</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To build an end-to-end, session-based authentication flow in Express with protected routes and an integrated todo service.
+          </div>
+          <p>
+            Implemented registration and login with hashed credentials, session tracking,
+            authentication middleware guarding private routes, logout teardown, and a
+            persistent todo list scoped to the signed-in user. The project README serves as
+            the written report.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Express.js</span><span class="tag">Auth</span>
+            <span class="tag">Sessions</span><span class="tag">EJS</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Assignment/loginpage" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/lab/Assignment/loginpage/README.md" target="_blank" rel="noopener noreferrer">Open project README <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 09 ============ -->
+      <article class="report-entry" id="lab-9">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">09</span>
+          <span class="report-entry__badge">Theory · Class 1</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/Class1</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Express Server &amp; Dynamic EJS Directory Binding</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To configure Express with the EJS view engine and bind a student dataset to dynamic templates through modular routing.
+          </div>
+          <p>
+            Set up the view engine and views directory, created route controllers, and
+            rendered a collection of student records into EJS pages. No standalone report
+            was written for this class — the working code is the record.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Express.js</span><span class="tag">EJS</span>
+            <span class="tag">Routing</span><span class="tag">Node.js</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Class1" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 10 ============ -->
+      <article class="report-entry" id="lab-10">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">10</span>
+          <span class="report-entry__badge">Theory · Class 2</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/Class2</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>HTTP Network DevTools &amp; Postman API Testing</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To inspect HTTP traffic in browser DevTools and validate REST endpoints with Postman.
+          </div>
+          <p>
+            Analysed request and response headers, status-code families (2xx, 4xx, 5xx) and
+            payload shapes, then built Postman collections to repeat the same checks. No
+            standalone report was written for this class.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">HTTP</span><span class="tag">Postman</span>
+            <span class="tag">DevTools</span><span class="tag">API Testing</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Class2" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 11 ============ -->
+      <article class="report-entry" id="lab-11">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">11</span>
+          <span class="report-entry__badge">Theory · Class 3</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/class3</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Python FastAPI Initialization &amp; ASGI Lifecycle</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To initialise a Python virtual environment and run a minimal FastAPI application on an ASGI server.
+          </div>
+          <p>
+            Created a virtual environment, installed FastAPI and Uvicorn, defined the first
+            endpoints, and ran the live-reloading development server while inspecting the
+            generated docs. No standalone report was written for this class.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">FastAPI</span><span class="tag">Python</span>
+            <span class="tag">ASGI</span><span class="tag">Uvicorn</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/class3" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 12 ============ -->
+      <article class="report-entry" id="lab-12">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">12</span>
+          <span class="report-entry__badge">Theory · Class 4</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/class4</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>FastAPI RESTful CRUD API with Pydantic Validation</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To build a RESTful CRUD API in FastAPI with Pydantic request validation.
+          </div>
+          <p>
+            Modelled request and response schemas with <code>BaseModel</code>, implemented
+            CRUD routes, added path and query filtering, and used the auto-generated OpenAPI
+            documentation to verify contracts. No standalone report was written for this
+            class.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">FastAPI</span><span class="tag">Pydantic</span>
+            <span class="tag">REST API</span><span class="tag">Validation</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/class4" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 13 ============ -->
+      <article class="report-entry" id="lab-13">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">13</span>
+          <span class="report-entry__badge">Theory · Class 5</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/class5</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>HTTP Cookie Lifecycle &amp; Security Defense Flags</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To demonstrate the HTTP cookie lifecycle in Express and apply security flags.
+          </div>
+          <p>
+            Set cookies with <code>maxAge</code>, <code>httpOnly</code> and
+            <code>secure</code>, read them on later requests, and cleared them with
+            <code>res.clearCookie()</code>. Covered how <code>httpOnly</code> limits XSS
+            exposure and how <code>secure</code> restricts transport. No standalone report
+            was written for this class.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Cookies</span><span class="tag">Express.js</span>
+            <span class="tag">Security</span><span class="tag">HttpOnly</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/class5" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 14 ============ -->
+      <article class="report-entry" id="lab-14">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">14</span>
+          <span class="report-entry__badge">Unit 2 ORM</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/Unit2/ORM</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Object-Relational Mapping &amp; Database Abstraction</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To understand Object-Relational Mapping and how it abstracts relational queries behind object interfaces.
+          </div>
+          <p>
+            Covered model mapping, relationships, transaction handling, and the trade-offs
+            between raw SQL and ORM abstractions. No standalone report was written for this
+            unit.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">ORM</span><span class="tag">Data Modeling</span>
+            <span class="tag">SQL/NoSQL</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Unit2/ORM" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 15 ============ -->
+      <article class="report-entry" id="lab-15">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">15</span>
+          <span class="report-entry__badge">Theory · Class 15</span>
+          <code class="report-entry__folder">BACKEND/TheoryClass/Class15</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>SQLite Schema Design &amp; Dual-Runtime Student Management</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To model a relational schema for an e-commerce system and implement it with SQLite across Node.js and Python runtimes.
+          </div>
+          <p>
+            Produced the conceptual data model — Customer, Product, Cart, Order and the
+            CartItem junction — then created <code>students_lab.db</code>, built a blog
+            application in Node.js, and wrote student-management scripts in Python against
+            the same database.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">SQLite</span><span class="tag">Data Modeling</span>
+            <span class="tag">Node.js</span><span class="tag">Python</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/TheoryClass/Class15" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/TheoryClass/Class15/report.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 16 ============ -->
+      <article class="report-entry" id="lab-16">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">16</span>
+          <span class="report-entry__badge">Docker &amp; DevOps</span>
+          <code class="report-entry__folder">BACKEND/class_docker</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Node.js Microservice Containerization with Docker</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To containerise a Node.js backend service with Docker and reproduce the runtime environment on any machine.
+          </div>
+          <p>
+            Wrote a Dockerfile for the service, built and ran the image, configured bind
+            mounts for hot reloading, and inspected container networking and logs. The
+            folder holds the runnable source rather than a separate write-up.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Docker</span><span class="tag">Containers</span>
+            <span class="tag">DevOps</span><span class="tag">Microservices</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/class_docker" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <span class="report-entry__note">No standalone report · code only</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 17 ============ -->
+      <article class="report-entry" id="lab-17">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">17</span>
+          <span class="report-entry__badge">Kafka Architecture</span>
+          <code class="report-entry__folder">BACKEND/KAFKA</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Distributed Event Streaming with Apache Kafka</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To demonstrate asynchronous, event-driven communication between services with Apache Kafka.
+          </div>
+          <p>
+            The order service published events to a Kafka topic and replied immediately with
+            HTTP 202; the inventory and notification services consumed those events
+            independently. The demo shows eventual consistency, service decoupling and fault
+            tolerance, since events wait in Kafka while a consumer is down.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Kafka</span><span class="tag">Event-Driven</span>
+            <span class="tag">Distributed Systems</span><span class="tag">Docker Compose</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/KAFKA" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/KAFKA/README.md" target="_blank" rel="noopener noreferrer">Open project README <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 18 ============ -->
+      <article class="report-entry" id="lab-18">
+        <div class="report-entry__meta">
+          <span class="report-entry__num">18</span>
+          <span class="report-entry__badge">Examination System</span>
+          <code class="report-entry__folder">BACKEND/Note-taking-Test-viva</code>
+        </div>
+        <div class="report-entry__body">
+          <h2>Full-Stack Note-Taking &amp; Viva Examination Portal</h2>
+          <div class="report-entry__aim">
+            <strong>Aim</strong>
+            To build a full-stack note-taking and viva examination portal with Node.js, Express, EJS and MongoDB Atlas.
+          </div>
+          <p>
+            Implemented the project structure, backend routes, note CRUD and templated
+            views, then documented the complete build step by step — setup, dependencies,
+            folder structure, server file and views — in the lab report.
+          </p>
+          <div class="report-entry__tags">
+            <span class="tag">Node.js</span><span class="tag">Express</span>
+            <span class="tag">MongoDB Atlas</span><span class="tag">EJS</span>
+            <span class="tag">Full-Stack</span>
+          </div>
+          <div class="report-entry__actions">
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/Note-taking-Test-viva" target="_blank" rel="noopener noreferrer">View code folder <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/blob/master/BACKEND/Note-taking-Test-viva/Testreport.md" target="_blank" rel="noopener noreferrer">Open report.md <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </div>
+      </article>
+
+      <p class="report-foot">
+        Consolidated index also available as
+        <a href="report.md" target="_blank" rel="noopener noreferrer">report.md</a>.
+        Source code lives in
+        <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">Backend-Main-JS-Python-</a>.
+      </p>
+
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" id="contact">
+    <div class="site-footer__top">
+      <div>
+        <p class="site-footer__kicker">Let's build something</p>
+        <h2 class="site-footer__title">Backend engineer<br>for hire.</h2>
+      </div>
+      <div class="site-footer__links">
+        <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
+        <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">Backend Repository <span aria-hidden="true">&#8599;</span></a>
+        <a href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer">Course Material <span aria-hidden="true">&#8599;</span></a>
+        <a href="index.html">Portfolio Home <span aria-hidden="true">&#8594;</span></a>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© <span id="year">2026</span> Gaurav Bhaskar · B.Tech CSE · UPES</span>
+      <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
