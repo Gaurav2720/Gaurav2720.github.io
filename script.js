@@ -14,27 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const emptyState = document.getElementById("empty-state");
   const resetBtn = document.getElementById("reset-filter-btn");
 
-  const countAll = document.getElementById("count-all");
-  const countLab = document.getElementById("count-lab");
-  const countTheory = document.getElementById("count-theory");
-  const countSystems = document.getElementById("count-systems");
-
   let activeCategory = "ALL";
   let searchQuery = "";
 
   const pad = (n) => (n < 10 ? `0${n}` : `${n}`);
 
-  // Update category counters
+  // Update each filter tab's counter from the dataset
   function updateCounters() {
-    const total = dataset.length;
-    const labCount = dataset.filter((item) => item.category === "LAB").length;
-    const theoryCount = dataset.filter((item) => item.category === "THEORY").length;
-    const systemsCount = dataset.filter((item) => item.category === "SYSTEMS").length;
-
-    if (countAll) countAll.textContent = pad(total);
-    if (countLab) countLab.textContent = pad(labCount);
-    if (countTheory) countTheory.textContent = pad(theoryCount);
-    if (countSystems) countSystems.textContent = pad(systemsCount);
+    filterTabs.forEach((tab) => {
+      const category = tab.getAttribute("data-category") || "ALL";
+      const total = category === "ALL"
+        ? dataset.length
+        : dataset.filter((item) => item.category === category).length;
+      const counter = tab.querySelector(".tab-count");
+      if (counter) counter.textContent = pad(total);
+    });
   }
 
   // Escape user-facing strings inserted as HTML
@@ -67,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (filtered.length === 0) {
       listContainer.innerHTML = "";
+      listContainer.setAttribute("aria-busy", "false");
       if (emptyState) emptyState.hidden = false;
       return;
     }
@@ -99,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="lab-card__actions">
             <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">
-              View Folder <span aria-hidden="true">&#8599;</span>
+              Code <span aria-hidden="true">&#8599;</span>
             </a>
             <a href="${reportHref}" class="btn btn--solid">
               Report <span aria-hidden="true">&#8594;</span>
@@ -108,6 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </article>`;
       })
       .join("");
+
+    listContainer.setAttribute("aria-busy", "false");
   }
 
   // Filter tabs
