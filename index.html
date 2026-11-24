@@ -3,311 +3,251 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaurav Bhaskar — Backend Development Lab Index (Semester 5)</title>
+  <meta name="description" content="Semester 5 Backend Development lab index for Gaurav Bhaskar, B.Tech CSE, UPES. Lab code folders and written reports.">
+  <style>
+    :root {
+      color-scheme: light;
+    }
 
-  <title>Gaurav Bhaskar — Backend Engineer &amp; Systems Lab</title>
-  <meta name="description" content="Backend engineering portfolio and lab journal by Gaurav Bhaskar — Node.js, Express, MongoDB, Django, FastAPI, Kafka, and Docker, with documented lab reports.">
-  <meta name="author" content="Gaurav Bhaskar">
-  <meta name="theme-color" content="#0b0b0c">
+    * {
+      box-sizing: border-box;
+    }
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Gaurav Bhaskar — Backend Engineer">
-  <meta property="og:description" content="Semester 5 backend engineering lab: APIs, databases, distributed systems, and documented reports.">
-  <meta property="og:image" content="gaurav-hero.png">
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 56px 24px 64px;
+    }
 
-  <link rel="stylesheet" href="style.css?v=7">
+    h1 {
+      margin: 0 0 20px;
+      font-size: 1.6rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    /* ---------- Student details ---------- */
+
+    .details {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 4px 16px;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .details dt {
+      margin: 0;
+      color: #555555;
+    }
+
+    .details dd {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    /* ---------- Index of work ---------- */
+
+    .section {
+      margin-top: 44px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      min-width: 520px;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    caption {
+      caption-side: top;
+      text-align: left;
+      padding-bottom: 8px;
+      color: #555555;
+      font-size: 0.85rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #d9d9d9;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      background: #f7f7f7;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    td.num {
+      width: 48px;
+      color: #555555;
+      white-space: nowrap;
+    }
+
+    a {
+      color: #0b4f9e;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:hover {
+      color: #073a75;
+    }
+
+    a:focus-visible {
+      outline: 2px solid #0b4f9e;
+      outline-offset: 2px;
+    }
+
+    /* ---------- Footer ---------- */
+
+    .page-footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      font-size: 0.9rem;
+    }
+
+    .page-footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 24px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 40px 18px 48px;
+      }
+
+      .details {
+        grid-template-columns: 100px 1fr;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
-<body id="top">
+<body>
+  <div class="page">
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Gaurav Bhaskar — home">
-      <span class="brand__mark">GB</span>
-      <span class="brand__text">
-        Gaurav Bhaskar
-        <small>Backend Engineering</small>
-      </span>
-    </a>
+    <header>
+      <h1>Gaurav Bhaskar</h1>
+      <dl class="details">
+        <dt>SAP ID</dt>
+        <dd>590012457</dd>
+        <dt>Program</dt>
+        <dd>B.Tech CSE</dd>
+        <dt>University</dt>
+        <dd>UPES</dd>
+        <dt>Semester</dt>
+        <dd>5</dd>
+        <dt>Course</dt>
+        <dd>Backend Development</dd>
+      </dl>
+    </header>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#labs">Labs</a>
-      <a href="#process">Process</a>
-      <a href="report.html">Reports</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <a class="header-cta" href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">
-      GitHub <span aria-hidden="true">&#8599;</span>
-    </a>
-  </header>
-
-  <main>
-
-    <!-- ===================== HERO ===================== -->
-    <section class="hero">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow">
-            <span class="pulse" aria-hidden="true"></span>
-            <span class="eyebrow__label">Semester 5 · Backend Engineering · <span class="nowrap">SAP 590012457</span></span>
-          </p>
-
-          <h1 class="hero__title">
-            <span class="hero__line">Backend</span>
-            <span class="hero__line hero__line--outline">Engineer<span class="accent">.</span></span>
-          </h1>
-
-          <p class="hero__lede">
-            I design and build the parts users never see — REST APIs, session flows,
-            database schemas, and event-driven services. This is the working journal:
-            every lab, every experiment, every report, in one place.
-          </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--solid btn--lg" href="#labs">Explore the labs <span aria-hidden="true">&#8594;</span></a>
-            <a class="btn btn--ghost btn--lg" href="report.html">Read the reports <span aria-hidden="true">&#8599;</span></a>
-          </div>
-
-          <ul class="hero__meta" aria-label="Core stack">
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>Django</li>
-            <li>Kafka</li>
-            <li>Docker</li>
-          </ul>
-        </div>
-
-        <figure class="hero__portrait">
-          <img src="gaurav-hero.png" alt="Portrait of Gaurav Bhaskar" width="1122" height="1402">
-          <span class="hero__stamp">Open to work</span>
-          <figcaption>
-            <span>Gaurav Bhaskar</span>
-            <span>B.Tech CSE · UPES</span>
-          </figcaption>
-        </figure>
+    <main class="section">
+      <h2>Index of Work</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Laboratory experiments in order of completion.</caption>
+          <thead>
+            <tr>
+              <th scope="col">No.</th>
+              <th scope="col">Lab title</th>
+              <th scope="col">Code (GitHub folder)</th>
+              <th scope="col">Report</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="num">01</td>
+              <td>HTML5</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/lAB1" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-1">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">02</td>
+              <td>JavaScript</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab5/Lab_05_JS_Concepts" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-2">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">03</td>
+              <td>DOM</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab7,8,9" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-3">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">04</td>
+              <td>Express</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab12/Lab12A/nodejs-express-lab" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-4">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">05</td>
+              <td>Sessions</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab12/LAB12b" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-5">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">06</td>
+              <td>MongoDB</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Lab13/mongoose-demo" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-6">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">07</td>
+              <td>Django</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/LAB15" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-7">View report</a></td>
+            </tr>
+            <tr>
+              <td class="num">08</td>
+              <td>Auth</td>
+              <td><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-/tree/master/BACKEND/lab/Assignment/loginpage" target="_blank" rel="noopener noreferrer">View code</a></td>
+              <td><a href="https://gaurav2720.github.io/report.html#lab-8">View report</a></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
+    </main>
 
-    <!-- ===================== MARQUEE ===================== -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>REST APIs</span><span aria-hidden="true">✦</span>
-        <span>Authentication</span><span aria-hidden="true">✦</span>
-        <span>MongoDB</span><span aria-hidden="true">✦</span>
-        <span>Django</span><span aria-hidden="true">✦</span>
-        <span>FastAPI</span><span aria-hidden="true">✦</span>
-        <span>Kafka</span><span aria-hidden="true">✦</span>
-        <span>Docker</span><span aria-hidden="true">✦</span>
-        <span>SQL</span><span aria-hidden="true">✦</span>
-        <span>REST APIs</span><span aria-hidden="true">✦</span>
-        <span>Authentication</span><span aria-hidden="true">✦</span>
-        <span>MongoDB</span><span aria-hidden="true">✦</span>
-        <span>Django</span><span aria-hidden="true">✦</span>
-        <span>FastAPI</span><span aria-hidden="true">✦</span>
-        <span>Kafka</span><span aria-hidden="true">✦</span>
-        <span>Docker</span><span aria-hidden="true">✦</span>
-        <span>SQL</span><span aria-hidden="true">✦</span>
-      </div>
-    </div>
+    <footer class="page-footer">
+      <ul>
+        <li><a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-">Backend repository</a></li>
+        <li><a href="https://gaurav2720.github.io/report.html">All lab reports</a></li>
+        <li><a href="https://gaurav2720.github.io/report.md">Raw report file</a></li>
+      </ul>
+    </footer>
 
-    <!-- ===================== ABOUT / STATS ===================== -->
-    <section class="about" id="about">
-      <div class="about__grid">
-        <div class="about__copy">
-          <p class="section-kicker">01 — The short version</p>
-          <h2 class="section-title">Backend first.<br>Always documented.</h2>
-          <p class="about__lede">
-            I'm a Computer Science undergraduate at UPES who likes the unglamorous
-            middle of the stack: request routing, state, schemas, and the contracts
-            between services.
-          </p>
-          <p class="about__body">
-            The work below is the Semester 5 backend curriculum — HTML5 and JavaScript
-            foundations through Express, MongoDB, Django, Kafka, and Docker. Every
-            practical ships with its code folder and a written report, so you can read
-            the thinking, not just the output.
-          </p>
-          <a class="text-link" href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer">
-            More on GitHub <span aria-hidden="true">&#8599;</span>
-          </a>
-        </div>
-
-        <div class="about__side">
-          <figure class="about__portrait">
-            <img src="smile.png" alt="Gaurav Bhaskar smiling" width="1122" height="1402" loading="lazy">
-          </figure>
-
-          <div class="stats">
-            <div class="stat">
-              <span class="stat__num">18</span>
-              <span class="stat__label">Experiments</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">08</span>
-              <span class="stat__label">Lab practicals</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">03</span>
-              <span class="stat__label">Systems builds</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">05</span>
-              <span class="stat__label">Semester</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== LABS ===================== -->
-    <section class="labs" id="labs">
-      <div class="labs__head">
-        <div>
-          <p class="section-kicker section-kicker--light">02 — The lab work</p>
-          <h2 class="section-title section-title--light">Clear-cut labs.<br><span class="accent">Zero guesswork.</span></h2>
-        </div>
-        <p class="labs__intro">
-          Eight practicals, each with its own number, folder, description, and report.
-          Filter by track, search by keyword, then jump straight to the code or the write-up.
-        </p>
-      </div>
-
-      <!-- Lab index -->
-      <nav class="lab-index" aria-label="Lab index">
-        <a href="report.html#lab-1"><span>01</span> HTML5</a>
-        <a href="report.html#lab-2"><span>02</span> JavaScript</a>
-        <a href="report.html#lab-3"><span>03</span> DOM</a>
-        <a href="report.html#lab-4"><span>04</span> Express</a>
-        <a href="report.html#lab-5"><span>05</span> Sessions</a>
-        <a href="report.html#lab-6"><span>06</span> MongoDB</a>
-        <a href="report.html#lab-7"><span>07</span> Django</a>
-        <a href="report.html#lab-8"><span>08</span> Auth</a>
-      </nav>
-
-      <!-- Controls -->
-      <div class="controls">
-        <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Filter by track">
-          <button class="filter-tab active" data-category="ALL" role="tab" aria-selected="true">
-            All <span class="tab-count" id="count-all">00</span>
-          </button>
-          <button class="filter-tab" data-category="LAB" role="tab" aria-selected="false">
-            Lab Practicals <span class="tab-count" id="count-lab">00</span>
-          </button>
-          <button class="filter-tab" data-category="THEORY" role="tab" aria-selected="false">
-            Theory &amp; APIs <span class="tab-count" id="count-theory">00</span>
-          </button>
-          <button class="filter-tab" data-category="SYSTEMS" role="tab" aria-selected="false">
-            Systems &amp; DevOps <span class="tab-count" id="count-systems">00</span>
-          </button>
-        </div>
-
-        <div class="search-box">
-          <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input
-            type="search"
-            id="search-input"
-            placeholder="Search Kafka, MongoDB, Docker, FastAPI, EJS…"
-            aria-label="Search experiments"
-            autocomplete="off"
-          >
-        </div>
-      </div>
-
-      <!-- Cards -->
-      <div class="experiments-container" id="experiments-list" role="feed" aria-busy="true">
-        <!-- Injected by script.js from data/experiments.js -->
-      </div>
-
-      <!-- Empty state -->
-      <div class="empty-state" id="empty-state" hidden>
-        <p>No experiments match that query.</p>
-        <button class="btn btn--solid" id="reset-filter-btn" type="button">Reset search</button>
-      </div>
-    </section>
-
-    <!-- ===================== PROCESS ===================== -->
-    <section class="process" id="process">
-      <div class="process__head">
-        <p class="section-kicker">03 — How the work gets done</p>
-        <h2 class="section-title">Build. Break. Document.</h2>
-      </div>
-
-      <ol class="process__list">
-        <li class="step">
-          <span class="step__num">01</span>
-          <h3 class="step__title">Read the spec</h3>
-          <p class="step__text">Start from the actual requirement — routes, inputs, status codes, and edge cases — before touching a single file.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">02</span>
-          <h3 class="step__title">Build the thin slice</h3>
-          <p class="step__text">Get one request working end-to-end. Server, route, data, response. Then layer validation, sessions, and persistence.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">03</span>
-          <h3 class="step__title">Test like an attacker</h3>
-          <p class="step__text">Postman, DevTools, bad payloads, missing cookies. The happy path is the easy part; the failures teach the design.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">04</span>
-          <h3 class="step__title">Write it down</h3>
-          <p class="step__text">Every lab ends with a report: aim, approach, code structure, observations. If it isn't written, it isn't finished.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- ===================== REPORT CTA ===================== -->
-    <section class="report-cta" id="reports">
-      <div class="report-cta__inner">
-        <p class="section-kicker section-kicker--dark">04 — The write-ups</p>
-        <h2 class="report-cta__title">Every lab has<br>a paper trail.</h2>
-        <p class="report-cta__text">
-          Read the consolidated lab report index on-site, or open the original
-          <code>report.md</code> files straight from the repository.
-        </p>
-        <div class="report-cta__actions">
-          <a class="btn btn--dark btn--lg" href="report.html">Open lab reports <span aria-hidden="true">&#8594;</span></a>
-          <a class="btn btn--outline-dark btn--lg" href="report.md" target="_blank" rel="noopener noreferrer">report.md <span aria-hidden="true">&#8599;</span></a>
-        </div>
-      </div>
-      <div class="report-cta__badge" aria-hidden="true">RPT<br>01—18</div>
-    </section>
-
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer" id="contact">
-    <div class="site-footer__top">
-      <div>
-        <p class="site-footer__kicker">Let's build something</p>
-        <h2 class="site-footer__title">Backend engineer<br>for hire.</h2>
-      </div>
-      <div class="site-footer__links">
-        <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
-        <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">Backend Repository <span aria-hidden="true">&#8599;</span></a>
-        <a href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer">Course Material <span aria-hidden="true">&#8599;</span></a>
-        <a href="report.html">Lab Reports <span aria-hidden="true">&#8594;</span></a>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom">
-      <span>© <span id="year">2026</span> Gaurav Bhaskar · B.Tech CSE · UPES</span>
-      <a href="#top">Back to top <span aria-hidden="true">&#8593;</span></a>
-    </div>
-  </footer>
-
-  <script src="data/experiments.js?v=7"></script>
-  <script src="script.js?v=7"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  </div>
 </body>
 </html>
