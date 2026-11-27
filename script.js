@@ -19,13 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pad = (n) => (n < 10 ? `0${n}` : `${n}`);
 
+  function matchesFilter(item, filter) {
+    if (filter === "ALL") return true;
+    if (filter === "LAB" || filter === "THEORY" || filter === "PBL") {
+      return (item.track || "LAB") === filter;
+    }
+    return item.category === filter;
+  }
+
   // Update each filter tab's counter from the dataset
   function updateCounters() {
     filterTabs.forEach((tab) => {
       const category = tab.getAttribute("data-category") || "ALL";
-      const total = category === "ALL"
-        ? dataset.length
-        : dataset.filter((item) => item.category === category).length;
+      const total = dataset.filter((item) => matchesFilter(item, category)).length;
       const counter = tab.querySelector(".tab-count");
       if (counter) counter.textContent = pad(total);
     });
@@ -40,13 +46,22 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/"/g, "&quot;");
   }
 
+  function renderTrackBadge(track) {
+    if (track === "THEORY") {
+      return `<span class="lab-card__track lab-card__track--theory">Theory Work</span>`;
+    }
+    if (track === "PBL") {
+      return `<span class="lab-card__track lab-card__track--pbl">PBL Activity</span>`;
+    }
+    return `<span class="lab-card__track lab-card__track--lab">Lab Practical</span>`;
+  }
+
   // Render cards
   function render() {
     if (!listContainer) return;
 
     const filtered = dataset.filter((item) => {
-      const matchCat = activeCategory === "ALL" || item.category === activeCategory;
-      if (!matchCat) return false;
+      if (!matchesFilter(item, activeCategory)) return false;
 
       if (!searchQuery) return true;
       const q = searchQuery.toLowerCase();
@@ -54,9 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const matchDesc = item.description.toLowerCase().includes(q);
       const matchFolder = (item.subCategory || "").toLowerCase().includes(q);
       const matchBadge = (item.categoryLabel || "").toLowerCase().includes(q);
+      const matchTrack = (item.trackLabel || "").toLowerCase().includes(q);
       const matchTags = (item.tags || []).some((t) => t.toLowerCase().includes(q));
 
-      return matchTitle || matchDesc || matchFolder || matchBadge || matchTags;
+      return matchTitle || matchDesc || matchFolder || matchBadge || matchTrack || matchTags;
     });
 
     if (filtered.length === 0) {
@@ -78,12 +94,17 @@ document.addEventListener("DOMContentLoaded", () => {
           ? `<code class="lab-card__path">${esc(item.subCategory)}</code>`
           : "";
         const reportHref = item.report || `report.html#lab-${item.id}`;
+        const track = item.track || "LAB";
+        const trackTag = renderTrackBadge(track);
 
         return `
-        <article class="lab-card" data-category="${esc(item.category)}">
+        <article class="lab-card" data-category="${esc(item.category)}" data-track="${esc(track)}">
           <div class="lab-card__head">
             <span class="lab-card__num">${numStr}</span>
-            <span class="lab-card__badge">${esc(item.categoryLabel || item.category)}</span>
+            <div class="lab-card__badges">
+              ${trackTag}
+              <span class="lab-card__badge">${esc(item.categoryLabel || item.category)}</span>
+            </div>
           </div>
 
           <h3 class="lab-card__title">${esc(item.title)}</h3>
