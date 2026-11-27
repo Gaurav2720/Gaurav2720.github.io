@@ -1,6 +1,6 @@
 /**
  * GAURAV BHASKAR — BACKEND ENGINEERING JOURNAL CONTROLLER
- * Lightweight vanilla JS renderer: filters, live search, and report actions.
+ * Lightweight vanilla JS renderer: separate Lab, Theory, and PBL sections with filters and search.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ? window.EXPERIMENTS_DATA
     : [];
 
-  const listContainer = document.getElementById("experiments-list");
+  const labBlock = document.getElementById("lab-block");
+  const theoryBlock = document.getElementById("theory-block");
+  const labContainer = document.getElementById("lab-list");
+  const theoryContainer = document.getElementById("theory-list");
   const searchInput = document.getElementById("search-input");
   const filterTabs = document.querySelectorAll(".filter-tab");
   const emptyState = document.getElementById("empty-state");
@@ -25,6 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return (item.track || "LAB") === filter;
     }
     return item.category === filter;
+  }
+
+  function matchesSearch(item, query) {
+    if (!query) return true;
+    const q = query.toLowerCase();
+    const matchTitle = item.title.toLowerCase().includes(q);
+    const matchDesc = item.description.toLowerCase().includes(q);
+    const matchFolder = (item.subCategory || "").toLowerCase().includes(q);
+    const matchBadge = (item.categoryLabel || "").toLowerCase().includes(q);
+    const matchTrack = (item.trackLabel || "").toLowerCase().includes(q);
+    const matchTags = (item.tags || []).some((t) => t.toLowerCase().includes(q));
+    return matchTitle || matchDesc || matchFolder || matchBadge || matchTrack || matchTags;
   }
 
   // Update each filter tab's counter from the dataset
@@ -56,44 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
     return `<span class="lab-card__track lab-card__track--lab">Lab Practical</span>`;
   }
 
-  // Render cards
-  function render() {
-    if (!listContainer) return;
-
-    const filtered = dataset.filter((item) => {
-      if (!matchesFilter(item, activeCategory)) return false;
-
-      if (!searchQuery) return true;
-      const q = searchQuery.toLowerCase();
-      const matchTitle = item.title.toLowerCase().includes(q);
-      const matchDesc = item.description.toLowerCase().includes(q);
-      const matchFolder = (item.subCategory || "").toLowerCase().includes(q);
-      const matchBadge = (item.categoryLabel || "").toLowerCase().includes(q);
-      const matchTrack = (item.trackLabel || "").toLowerCase().includes(q);
-      const matchTags = (item.tags || []).some((t) => t.toLowerCase().includes(q));
-
-      return matchTitle || matchDesc || matchFolder || matchBadge || matchTrack || matchTags;
-    });
-
-    if (filtered.length === 0) {
-      listContainer.innerHTML = "";
-      listContainer.setAttribute("aria-busy", "false");
-      if (emptyState) emptyState.hidden = false;
-      return;
-    }
-
-    if (emptyState) emptyState.hidden = true;
-
-    listContainer.innerHTML = filtered
+  function renderCards(items) {
+    return items
       .map((item) => {
-        const numStr = pad(item.id);
+        const numStr = pad(item.num || 1);
         const tagsHtml = (item.tags || [])
           .map((t) => `<span class="tag">${esc(t)}</span>`)
           .join("");
         const folderPath = item.subCategory
           ? `<code class="lab-card__path">${esc(item.subCategory)}</code>`
           : "";
-        const reportHref = item.report || `report.html#lab-${item.id}`;
+        const reportHref = item.report || `report.html#${esc(item.id)}`;
         const track = item.track || "LAB";
         const trackTag = renderTrackBadge(track);
 
@@ -124,8 +112,48 @@ document.addEventListener("DOMContentLoaded", () => {
         </article>`;
       })
       .join("");
+  }
 
-    listContainer.setAttribute("aria-busy", "false");
+  // Render separated Lab and Theory sections
+  function render() {
+    if (!labContainer || !theoryContainer) return;
+
+    const filtered = dataset.filter(
+      (item) => matchesFilter(item, activeCategory) && matchesSearch(item, searchQuery)
+    );
+
+    const labItems = filtered.filter((item) => (item.track || "LAB") === "LAB");
+    const theoryItems = filtered.filter((item) => item.track === "THEORY");
+    const pblItems = filtered.filter((item) => item.track === "PBL");
+
+    // If user explicitly filters to PBL, show PBL card in labContainer or scroll to #pbl
+    const showLab = labItems.length > 0;
+    const showTheory = theoryItems.length > 0;
+    const showPblInGrid = activeCategory === "PBL" && pblItems.length > 0;
+
+    if (labBlock) labBlock.hidden = !showLab && !showPblInGrid;
+    if (theoryBlock) theoryBlock.hidden = !showTheory;
+
+    if (showPblInGrid) {
+      labContainer.innerHTML = renderCards(pblItems);
+      const labHeading = labBlock ? labBlock.querySelector(".track-section__title") : null;
+      if (labHeading) labHeading.dataset.original = labHeading.textContent;
+      if (labHeading) labHeading.textContent = "PBL — Project-Based Learning";
+    } else {
+      const labHeading = labBlock ? labBlock.querySelector(".track-section__title") : null;
+      if (labHeading && labHeading.dataset.original) {
+        labHeading.textContent = labHeading.dataset.original;
+      }
+      labContainer.innerHTML = renderCards(labItems);
+    }
+
+    theoryContainer.innerHTML = renderCards(theoryItems);
+
+    labContainer.setAttribute("aria-busy", "false");
+    theoryContainer.setAttribute("aria-busy", "false");
+
+    const totalShown = labItems.length + theoryItems.length + (showPblInGrid ? pblItems.length : 0);
+    if (emptyState) emptyState.hidden = totalShown > 0;
   }
 
   // Filter tabs

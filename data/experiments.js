@@ -5,8 +5,9 @@
  *   - https://github.com/Gaurav2720/PBl_activity_590012457 (PBL: FastAPI, Docker & CI/CD)
  *   - https://github.com/Gaurav2720/Gaurav2720.github.io (Portfolio site)
  *
- * Each entry carries:
+ * Each track is numbered independently (starting at 01):
  *   track        -> "LAB" | "THEORY" | "PBL"
+ *   num          -> per-track display number (1..N)
  *   link         -> code folder in the respective repository
  *   report       -> on-site report section (report.html#...)
  *   sourceReport -> the original report.md / README.md on GitHub (null if none)
@@ -22,10 +23,11 @@ const BLOB_PBL = REPO_PBL + "/blob/main/";
 
 const EXPERIMENTS_DATA = [
   // =========================================================================
-  // 1. LABORATORY PRACTICALS (BACKEND/lab/ & Viva)
+  // 1. LABORATORY PRACTICALS (BACKEND/lab/ & Viva) — 01 to 09
   // =========================================================================
   {
-    id: 1,
+    id: "lab-1",
+    num: 1,
     title: "HTML5 Semantic Structure & Form Controls",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -39,7 +41,8 @@ const EXPERIMENTS_DATA = [
     tags: ["HTML5", "Forms", "Multimedia"]
   },
   {
-    id: 2,
+    id: "lab-2",
+    num: 2,
     title: "Core JavaScript Engine & Async Foundations",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -53,7 +56,8 @@ const EXPERIMENTS_DATA = [
     tags: ["JavaScript", "Async/Await", "Closures"]
   },
   {
-    id: 3,
+    id: "lab-3",
+    num: 3,
     title: "DOM Manipulation & Interactive Todo Application",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -67,7 +71,8 @@ const EXPERIMENTS_DATA = [
     tags: ["DOM", "Events", "ES6+"]
   },
   {
-    id: 4,
+    id: "lab-4",
+    num: 4,
     title: "Express Routing & EJS Server-Side Rendering",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -81,7 +86,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Node.js", "Express.js", "EJS"]
   },
   {
-    id: 5,
+    id: "lab-5",
+    num: 5,
     title: "Sessions & Cookies with Express",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -95,7 +101,8 @@ const EXPERIMENTS_DATA = [
     tags: ["express-session", "Cookies", "Security"]
   },
   {
-    id: 6,
+    id: "lab-6",
+    num: 6,
     title: "MongoDB Persistence with Mongoose CRUD",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -109,7 +116,8 @@ const EXPERIMENTS_DATA = [
     tags: ["MongoDB", "Mongoose", "CRUD"]
   },
   {
-    id: 7,
+    id: "lab-7",
+    num: 7,
     title: "Django Todo Application with SQLite",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -123,7 +131,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Django", "Python", "SQLite"]
   },
   {
-    id: 8,
+    id: "lab-8",
+    num: 8,
     title: "Authentication Flow & Todo Service",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -137,7 +146,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Express.js", "Auth", "Sessions"]
   },
   {
-    id: 9,
+    id: "lab-9",
+    num: 9,
     title: "Full-Stack Note-Taking & Viva Examination Portal",
     track: "LAB",
     trackLabel: "Lab Practical",
@@ -152,10 +162,11 @@ const EXPERIMENTS_DATA = [
   },
 
   // =========================================================================
-  // 2. THEORY WORK & UNIT ASSIGNMENTS (BACKEND/TheoryClass/Unit1–Unit4)
+  // 2. THEORY WORK & UNIT ASSIGNMENTS (BACKEND/TheoryClass/Unit1–Unit4) — 01 to 11
   // =========================================================================
   {
-    id: 10,
+    id: "theory-1",
+    num: 1,
     title: "Express Server & Dynamic EJS Directory Binding",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -169,7 +180,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Express.js", "EJS", "Routing", "Unit 1"]
   },
   {
-    id: 11,
+    id: "theory-2",
+    num: 2,
     title: "HTTP Network DevTools & Postman API Testing",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -183,7 +195,8 @@ const EXPERIMENTS_DATA = [
     tags: ["HTTP", "Postman", "DevTools", "Unit 1"]
   },
   {
-    id: 12,
+    id: "theory-3",
+    num: 3,
     title: "HTTP Cookie Lifecycle & Session Management",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -197,7 +210,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Cookies", "Express-Session", "Security", "Unit 1"]
   },
   {
-    id: 13,
+    id: "theory-4",
+    num: 4,
     title: "LocalStorage Notes App (Client-Side Storage)",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -211,7 +225,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Web Storage", "localStorage", "JavaScript", "Unit 1"]
   },
   {
-    id: 14,
+    id: "theory-5",
+    num: 5,
     title: "SQLAlchemy 2.x ORM & Declarative Relationships",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -225,7 +240,8 @@ const EXPERIMENTS_DATA = [
     tags: ["ORM", "SQLAlchemy", "SQLite", "Unit 2"]
   },
   {
-    id: 15,
+    id: "theory-6",
+    num: 6,
     title: "Python FastAPI Initialization & ASGI Lifecycle",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -239,7 +255,8 @@ const EXPERIMENTS_DATA = [
     tags: ["FastAPI", "ASGI", "Uvicorn", "Unit 2"]
   },
   {
-    id: 16,
+    id: "theory-7",
+    num: 7,
     title: "FastAPI RESTful CRUD API with Pydantic Validation",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -253,7 +270,8 @@ const EXPERIMENTS_DATA = [
     tags: ["FastAPI", "Pydantic", "REST API", "Unit 2"]
   },
   {
-    id: 17,
+    id: "theory-8",
+    num: 8,
     title: "Relational Data Modeling & Dual-Runtime Scripts",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -267,7 +285,8 @@ const EXPERIMENTS_DATA = [
     tags: ["SQLite", "SQLAlchemy", "Node.js", "Unit 2"]
   },
   {
-    id: 18,
+    id: "theory-9",
+    num: 9,
     title: "PostgreSQL JSONB & GIN Indexing Explorer",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -281,7 +300,8 @@ const EXPERIMENTS_DATA = [
     tags: ["PostgreSQL", "JSONB", "GIN Index", "Unit 2"]
   },
   {
-    id: 19,
+    id: "theory-10",
+    num: 10,
     title: "Django Task Manager API, Middleware & Caching",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -295,7 +315,8 @@ const EXPERIMENTS_DATA = [
     tags: ["Django", "Middleware", "Caching", "Unit 3"]
   },
   {
-    id: 20,
+    id: "theory-11",
+    num: 11,
     title: "Multi-Stage FastAPI Docker & CI/CD Specification",
     track: "THEORY",
     trackLabel: "Theory Work",
@@ -310,10 +331,11 @@ const EXPERIMENTS_DATA = [
   },
 
   // =========================================================================
-  // 3. PBL — PROJECT-BASED LEARNING (PBl_activity_590012457)
+  // 3. PBL — PROJECT-BASED LEARNING (PBl_activity_590012457) — 01
   // =========================================================================
   {
-    id: 21,
+    id: "pbl-1",
+    num: 1,
     title: "FastAPI Docker & GitHub Actions CI/CD Pipeline",
     track: "PBL",
     trackLabel: "PBL Activity",

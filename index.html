@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body id="top">
 
@@ -32,7 +32,8 @@
     </a>
 
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#labs">Labs &amp; Theory</a>
+      <a href="#lab-block">Labs</a>
+      <a href="#theory-block">Theory</a>
       <a href="#pbl">PBL</a>
       <a href="report.html">Reports</a>
     </nav>
@@ -73,19 +74,20 @@
           </ul>
 
           <div class="hero__actions">
-            <a class="btn btn--solid btn--lg" href="#labs">View the labs <span aria-hidden="true">&#8594;</span></a>
+            <a class="btn btn--solid btn--lg" href="#lab-block">Lab Practicals <span aria-hidden="true">&#8594;</span></a>
+            <a class="btn btn--ghost btn--lg" href="#theory-block">Theory Work <span aria-hidden="true">&#8594;</span></a>
             <a class="btn btn--ghost btn--lg" href="#pbl">PBL Activity <span aria-hidden="true">&#8594;</span></a>
-            <a class="btn btn--ghost btn--lg" href="report.html">Read the reports <span aria-hidden="true">&#8599;</span></a>
+            <a class="btn btn--ghost btn--lg" href="report.html">Read Reports <span aria-hidden="true">&#8599;</span></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== LABS & THEORY ===================== -->
+    <!-- ===================== LABS & THEORY (SEPARATE TRACKS) ===================== -->
     <section class="labs" id="labs">
 
       <!-- Quick index -->
-      <nav class="lab-index" aria-label="Lab index">
+      <nav class="lab-index" aria-label="Quick index">
         <a href="report.html#lab-1"><span>01</span> HTML5</a>
         <a href="report.html#lab-2"><span>02</span> JavaScript</a>
         <a href="report.html#lab-3"><span>03</span> DOM</a>
@@ -94,8 +96,9 @@
         <a href="report.html#lab-6"><span>06</span> MongoDB</a>
         <a href="report.html#lab-7"><span>07</span> Django</a>
         <a href="report.html#lab-8"><span>08</span> Auth</a>
-        <a href="report.html#track-theory"><span>TH</span> Theory Units 1–4</a>
-        <a href="report.html#pbl-1"><span>PB</span> PBL Activity</a>
+        <a href="report.html#lab-9"><span>09</span> Viva</a>
+        <a href="#theory-block"><span>TH</span> Theory Units 1–4</a>
+        <a href="#pbl"><span>PB</span> PBL Activity</a>
       </nav>
 
       <!-- Controls -->
@@ -139,9 +142,28 @@
         </div>
       </div>
 
-      <!-- Cards -->
-      <div class="experiments-container" id="experiments-list" role="feed" aria-busy="true">
-        <!-- Injected by script.js from data/experiments.js -->
+      <!-- Track 1: Laboratory Practicals -->
+      <div class="track-section" id="lab-block">
+        <div class="track-section__head">
+          <span class="track-section__kicker track-section__kicker--lab">Track 01 · Laboratory</span>
+          <h2 class="track-section__title">Laboratory Practicals &amp; Viva</h2>
+          <p class="track-section__desc">Core syllabus lab practicals (01–09) from <code>BACKEND/lab/</code> and the Midsem Viva examination portal.</p>
+        </div>
+        <div class="experiments-container" id="lab-list" role="feed" aria-busy="true">
+          <!-- Injected by script.js -->
+        </div>
+      </div>
+
+      <!-- Track 2: Theory Work -->
+      <div class="track-section" id="theory-block">
+        <div class="track-section__head">
+          <span class="track-section__kicker track-section__kicker--theory">Track 02 · Theory (CSFS3008P)</span>
+          <h2 class="track-section__title">Theory Classes &amp; Unit Assignments</h2>
+          <p class="track-section__desc">Lecture implementations and assignments (01–11) organized across Units 1–4 in <code>BACKEND/TheoryClass/</code>.</p>
+        </div>
+        <div class="experiments-container" id="theory-list" role="feed" aria-busy="true">
+          <!-- Injected by script.js -->
+        </div>
       </div>
 
       <!-- Empty state -->
@@ -155,7 +177,7 @@
     <section class="pbl-section" id="pbl">
       <div class="pbl-section__inner">
         <div class="pbl-section__head">
-          <p class="section-kicker">Project-Based Learning · SAP 590012457</p>
+          <p class="section-kicker">Track 03 · Project-Based Learning · SAP 590012457</p>
           <h2 class="section-title section-title--light">PBL Activity<span class="accent">.</span></h2>
           <p class="pbl-section__lede">
             FastAPI Docker &amp; GitHub Actions CI/CD Lab — a containerized FastAPI microservice
@@ -193,8 +215,8 @@
     <!-- ===================== REPORT CTA ===================== -->
     <section class="report-cta" id="reports">
       <div class="report-cta__inner">
-        <p class="section-kicker section-kicker--dark">02 — The write-ups</p>
-        <h2 class="report-cta__title">Every lab has<br>a paper trail.</h2>
+        <p class="section-kicker section-kicker--dark">The write-ups</p>
+        <h2 class="report-cta__title">Every track has<br>a paper trail.</h2>
         <p class="report-cta__text">
           Read the consolidated lab, theory, and PBL report index on-site, or open the original
           <code>report.md</code> files straight from the repository.
@@ -204,7 +226,7 @@
           <a class="btn btn--outline-dark btn--lg" href="report.md" target="_blank" rel="noopener noreferrer">report.md <span aria-hidden="true">&#8599;</span></a>
         </div>
       </div>
-      <div class="report-cta__badge" aria-hidden="true">RPT<br>01—21</div>
+      <div class="report-cta__badge" aria-hidden="true">RPT<br>LAB/TH</div>
     </section>
 
   </main>
@@ -232,8 +254,8 @@
     </div>
   </footer>
 
-  <script src="data/experiments.js?v=10"></script>
-  <script src="script.js?v=10"></script>
+  <script src="data/experiments.js?v=11"></script>
+  <script src="script.js?v=11"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
