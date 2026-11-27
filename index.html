@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Gaurav Bhaskar — Backend Development Lab Index (Semester 5)</title>
-  <meta name="description" content="Semester 5 Backend Development lab index for Gaurav Bhaskar, B.Tech CSE, UPES. Eight lab practicals with code folders and written reports.">
+  <meta name="description" content="Semester 5 Backend Development index for Gaurav Bhaskar, B.Tech CSE, UPES. Lab practicals, theory work, and PBL activity with code folders and written reports.">
   <meta name="author" content="Gaurav Bhaskar">
   <meta name="theme-color" content="#0b0b0c">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Gaurav Bhaskar — Backend Development Lab Index">
-  <meta property="og:description" content="Semester 5 Backend Development lab index: eight practicals with code and documented reports.">
+  <meta property="og:description" content="Semester 5 Backend Development index: lab practicals, theory classes, and PBL activity with code and documented reports.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body id="top">
 
@@ -32,7 +32,8 @@
     </a>
 
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#labs">Labs</a>
+      <a href="#labs">Labs &amp; Theory</a>
+      <a href="#pbl">PBL</a>
       <a href="report.html">Reports</a>
     </nav>
 
@@ -73,16 +74,17 @@
 
           <div class="hero__actions">
             <a class="btn btn--solid btn--lg" href="#labs">View the labs <span aria-hidden="true">&#8594;</span></a>
+            <a class="btn btn--ghost btn--lg" href="#pbl">PBL Activity <span aria-hidden="true">&#8594;</span></a>
             <a class="btn btn--ghost btn--lg" href="report.html">Read the reports <span aria-hidden="true">&#8599;</span></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===================== LABS ===================== -->
+    <!-- ===================== LABS & THEORY ===================== -->
     <section class="labs" id="labs">
 
-      <!-- Lab index -->
+      <!-- Quick index -->
       <nav class="lab-index" aria-label="Lab index">
         <a href="report.html#lab-1"><span>01</span> HTML5</a>
         <a href="report.html#lab-2"><span>02</span> JavaScript</a>
@@ -92,22 +94,33 @@
         <a href="report.html#lab-6"><span>06</span> MongoDB</a>
         <a href="report.html#lab-7"><span>07</span> Django</a>
         <a href="report.html#lab-8"><span>08</span> Auth</a>
+        <a href="report.html#track-theory"><span>TH</span> Theory Units 1–4</a>
+        <a href="report.html#pbl-1"><span>PB</span> PBL Activity</a>
       </nav>
 
       <!-- Controls -->
       <div class="controls">
-        <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Filter by stack">
+        <div class="filter-tabs" id="filter-tabs" role="tablist" aria-label="Filter by track or stack">
           <button class="filter-tab active" data-category="ALL" role="tab" aria-selected="true">
-            All <span class="tab-count" id="count-all">13</span>
+            All <span class="tab-count" id="count-all">21</span>
+          </button>
+          <button class="filter-tab" data-category="LAB" role="tab" aria-selected="false">
+            Lab Practicals <span class="tab-count" id="count-lab">09</span>
+          </button>
+          <button class="filter-tab" data-category="THEORY" role="tab" aria-selected="false">
+            Theory Work <span class="tab-count" id="count-theory">11</span>
+          </button>
+          <button class="filter-tab" data-category="PBL" role="tab" aria-selected="false">
+            PBL <span class="tab-count" id="count-pbl">01</span>
           </button>
           <button class="filter-tab" data-category="FRONTEND" role="tab" aria-selected="false">
-            Frontend <span class="tab-count" id="count-frontend">03</span>
+            Frontend <span class="tab-count" id="count-frontend">04</span>
           </button>
           <button class="filter-tab" data-category="NODE" role="tab" aria-selected="false">
-            Node &amp; Express <span class="tab-count" id="count-node">04</span>
+            Node &amp; Express <span class="tab-count" id="count-node">09</span>
           </button>
           <button class="filter-tab" data-category="PYTHON" role="tab" aria-selected="false">
-            Python &amp; Django <span class="tab-count" id="count-python">01</span>
+            Python &amp; FastAPI <span class="tab-count" id="count-python">08</span>
           </button>
         </div>
 
@@ -119,8 +132,8 @@
           <input
             type="search"
             id="search-input"
-            placeholder="Search HTML5, JavaScript, Express, MongoDB, Django…"
-            aria-label="Search labs"
+            placeholder="Search Lab, Theory, PBL, Express, FastAPI, Docker…"
+            aria-label="Search labs, theory, and PBL"
             autocomplete="off"
           >
         </div>
@@ -138,13 +151,52 @@
       </div>
     </section>
 
+    <!-- ===================== PBL SECTION ===================== -->
+    <section class="pbl-section" id="pbl">
+      <div class="pbl-section__inner">
+        <div class="pbl-section__head">
+          <p class="section-kicker">Project-Based Learning · SAP 590012457</p>
+          <h2 class="section-title section-title--light">PBL Activity<span class="accent">.</span></h2>
+          <p class="pbl-section__lede">
+            FastAPI Docker &amp; GitHub Actions CI/CD Lab — a containerized FastAPI microservice
+            published to Docker Hub (<code>gerrordev/fastapi-health:latest</code>) with automated
+            CI/CD builds on every push to <code>main</code>.
+          </p>
+        </div>
+
+        <div class="pbl-card">
+          <div class="pbl-card__meta">
+            <span class="lab-card__track lab-card__track--pbl">PBL Activity</span>
+            <span class="lab-card__badge">FastAPI · Docker · CI/CD</span>
+          </div>
+          <h3 class="pbl-card__title">FastAPI Health Service &amp; Automated Docker Hub Pipeline</h3>
+          <p class="pbl-card__desc">
+            Includes the FastAPI application (<code>FASTapi_handsON/main.py</code>),
+            <code>python:3.12-slim</code> Dockerfile, GitHub Actions workflow, and a 21-section
+            documentation &amp; viva guide covering architecture, commands, troubleshooting, and Q&amp;A.
+          </p>
+          <div class="pbl-card__actions">
+            <a class="btn btn--solid" href="https://github.com/Gaurav2720/PBl_activity_590012457" target="_blank" rel="noopener noreferrer">
+              Open PBL Repository <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/Gaurav2720/PBl_activity_590012457/tree/main/FASTapi_handsON" target="_blank" rel="noopener noreferrer">
+              View FastAPI Code <span aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="btn btn--ghost" href="report.html#pbl-1">
+              Read PBL Report <span aria-hidden="true">&#8594;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== REPORT CTA ===================== -->
     <section class="report-cta" id="reports">
       <div class="report-cta__inner">
         <p class="section-kicker section-kicker--dark">02 — The write-ups</p>
         <h2 class="report-cta__title">Every lab has<br>a paper trail.</h2>
         <p class="report-cta__text">
-          Read the consolidated lab report index on-site, or open the original
+          Read the consolidated lab, theory, and PBL report index on-site, or open the original
           <code>report.md</code> files straight from the repository.
         </p>
         <div class="report-cta__actions">
@@ -152,7 +204,7 @@
           <a class="btn btn--outline-dark btn--lg" href="report.md" target="_blank" rel="noopener noreferrer">report.md <span aria-hidden="true">&#8599;</span></a>
         </div>
       </div>
-      <div class="report-cta__badge" aria-hidden="true">RPT<br>01—08</div>
+      <div class="report-cta__badge" aria-hidden="true">RPT<br>01—21</div>
     </section>
 
   </main>
@@ -167,6 +219,7 @@
       <div class="site-footer__links">
         <a href="https://github.com/Gaurav2720" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">&#8599;</span></a>
         <a href="https://github.com/Gaurav2720/Backend-Main-JS-Python-" target="_blank" rel="noopener noreferrer">Backend Repository <span aria-hidden="true">&#8599;</span></a>
+        <a href="https://github.com/Gaurav2720/PBl_activity_590012457" target="_blank" rel="noopener noreferrer">PBL Repository <span aria-hidden="true">&#8599;</span></a>
         <a href="report.html">Lab Reports <span aria-hidden="true">&#8594;</span></a>
         <a href="report.md" target="_blank" rel="noopener noreferrer">report.md <span aria-hidden="true">&#8599;</span></a>
         <a href="https://upessocs.github.io/#dir=/Lectures/Backend%20Development/&file=list.txt" target="_blank" rel="noopener noreferrer">Course Material <span aria-hidden="true">&#8599;</span></a>
@@ -179,20 +232,10 @@
     </div>
   </footer>
 
-  <script src="data/experiments.js?v=8"></script>
-  <script src="script.js?v=8"></script>
+  <script src="data/experiments.js?v=10"></script>
+  <script src="script.js?v=10"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
